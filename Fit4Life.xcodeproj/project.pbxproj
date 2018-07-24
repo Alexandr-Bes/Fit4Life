@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */; };
+		FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */; };
+		FA6757F920FDFC8E0009A848 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757F820FDFC8E0009A848 /* UserDataViewController.swift */; };
+		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
-		FAC91D3520CD890000E301B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3420CD890000E301B2 /* ViewController.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
 		FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */; };
 		FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3C20CD890100E301B2 /* Assets.xcassets */; };
 		FAC91D4020CD890100E301B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3E20CD890100E301B2 /* LaunchScreen.storyboard */; };
-		FAC91D4920CD89C400E301B2 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D4820CD89C400E301B2 /* RegisterPageViewController.swift */; };
 		FADAB18A20CDB71D0083D3A4 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = FADAB16C20CDB71D0083D3A4 /* Icon-29.png */; };
 		FADAB18B20CDB71D0083D3A4 /* Icon-16.png in Resources */ = {isa = PBXBuildFile; fileRef = FADAB16D20CDB71D0083D3A4 /* Icon-16.png */; };
 		FADAB18C20CDB71D0083D3A4 /* Icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = FADAB16E20CDB71D0083D3A4 /* Icon-256.png */; };
@@ -47,15 +49,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDataTableViewController.swift; sourceTree = "<group>"; };
+		FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FA6757F820FDFC8E0009A848 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
+		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC91D3220CD890000E301B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAC91D3420CD890000E301B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAC91D3720CD890000E301B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC91D3A20CD890000E301B2 /* Fit4Life.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fit4Life.xcdatamodel; sourceTree = "<group>"; };
 		FAC91D3C20CD890100E301B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC91D3F20CD890100E301B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC91D4120CD890100E301B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAC91D4820CD89C400E301B2 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		FADAB16C20CDB71D0083D3A4 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		FADAB16D20CDB71D0083D3A4 /* Icon-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-16.png"; sourceTree = "<group>"; };
 		FADAB16E20CDB71D0083D3A4 /* Icon-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-256.png"; sourceTree = "<group>"; };
@@ -99,6 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1BFB9620FAA39E003C1324 /* Initial Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */,
+			);
+			path = "Initial Data";
+			sourceTree = "<group>";
+		};
+		FA1BFB9920FAA89A003C1324 /* User Data&Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FA6757FB2100EEAD0009A848 /* UserData.swift */,
+			);
+			path = "User Data&Settings";
+			sourceTree = "<group>";
+		};
 		FAC91D2620CD890000E301B2 = {
 			isa = PBXGroup;
 			children = (
@@ -119,24 +139,26 @@
 		FAC91D3120CD890000E301B2 /* Fit4Life */ = {
 			isa = PBXGroup;
 			children = (
-				FAC91D3220CD890000E301B2 /* AppDelegate.swift */,
-				FAC91D3420CD890000E301B2 /* ViewController.swift */,
+				FA1BFB9620FAA39E003C1324 /* Initial Data */,
+				FA1BFB9920FAA89A003C1324 /* User Data&Settings */,
 				FAC91D3620CD890000E301B2 /* Main.storyboard */,
 				FAC91D3C20CD890100E301B2 /* Assets.xcassets */,
+				FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */,
+				FAC91D3220CD890000E301B2 /* AppDelegate.swift */,
 				FAC91D3E20CD890100E301B2 /* LaunchScreen.storyboard */,
 				FAC91D4120CD890100E301B2 /* Info.plist */,
 				FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */,
-				FAC91D4720CD895000E301B2 /* Registration */,
+				FAC91D4720CD895000E301B2 /* UserData */,
 			);
 			path = Fit4Life;
 			sourceTree = "<group>";
 		};
-		FAC91D4720CD895000E301B2 /* Registration */ = {
+		FAC91D4720CD895000E301B2 /* UserData */ = {
 			isa = PBXGroup;
 			children = (
-				FAC91D4820CD89C400E301B2 /* RegisterPageViewController.swift */,
+				FA6757F820FDFC8E0009A848 /* UserDataViewController.swift */,
 			);
-			path = Registration;
+			path = UserData;
 			sourceTree = "<group>";
 		};
 		FADAB16B20CDB71D0083D3A4 /* icons */ = {
@@ -278,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC91D4920CD89C400E301B2 /* RegisterPageViewController.swift in Sources */,
-				FAC91D3520CD890000E301B2 /* ViewController.swift in Sources */,
+				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
+				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
+				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
+				FA6757F920FDFC8E0009A848 /* UserDataViewController.swift in Sources */,
 				FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */,
 				FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */,
 			);
