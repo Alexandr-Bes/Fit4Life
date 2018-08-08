@@ -25,16 +25,19 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
 
     // MARK: - Private properties
+
     private struct Constants {
         static let mainStoryBoardName = "Main"
         static let tabBarViewController = "MainTabBarController"
     }
 
-    // MARK: - Upload?
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+
 
     // MARK: - Private Methods
 
@@ -67,13 +70,13 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
 
-        heightTextField.inputAccessoryView = makeToolBar()
+        heightTextField.inputAccessoryView = makeToolBar(type: .next)
 
     }
 
-    private func makeToolBar() -> UIToolbar {
+    private func makeToolBar(type: TypingResultButtonType) -> UIToolbar {
         let toolbar = UIToolbar()
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: nil, action:  #selector(doneAction))
+        let doneButton = UIBarButtonItem(title: type.rawValue, style: .done, target: nil, action:  #selector(doneAction))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem:  .flexibleSpace, target: nil, action: nil)
         toolbar.items = [flexibleItem, doneButton]
         toolbar.sizeToFit()
@@ -85,8 +88,8 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 
     // MARK: - Actions
-    @IBAction func saveDataButton(_ sender: Any) {
 
+    @IBAction func saveDataButton(_ sender: Any) {
 
         guard let name = nameTextField.text,
             let heightString = heightTextField.text,
@@ -118,19 +121,23 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
         present(linkToMainTabBarController, animated: true)
 
+
         print(newUser.description)
 
     }
 
     @IBAction func manOrWomanToggle(_ sender: UISegmentedControl) {
+
         if sender.selectedSegmentIndex == 0 {
-            print("Man")
+            print("man")
+
         } else {
             print("Woman")
         }
     }
 
     //MARK: - UI Text Field Delegate methods
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
             heightTextField.becomeFirstResponder()
@@ -155,6 +162,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 
     //MARK: - Alert message
+    
     func displayMassage(userMassage:String) -> Void {
         DispatchQueue.main.async {
             let alertContoller = UIAlertController(title: "Error", message: userMassage, preferredStyle: .alert)
@@ -169,7 +177,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             self.present(alertContoller, animated: true, completion: nil)
         }
     }
+}
 
-
-
+enum TypingResultButtonType: String {
+    case next = "Next"
+    case done = "Done"
 }
