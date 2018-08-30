@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Data {
-    static var shared = Data()
+class StoredData {
+    static var shared = StoredData()
 
     var data = [UserData]()
 }

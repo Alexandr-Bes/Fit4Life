@@ -30,23 +30,24 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         userDataTableView.delegate = self
         userDataTableView.dataSource = self
 
-        guard let nibsArray = Bundle.main.loadNibNamed(Constants.dataTableViewCellId, owner: nil, options: nil),
-            let nib = nibsArray[0] as? UINib
-            else { return }
+        let nib = UINib(nibName: Constants.dataTableViewCellId, bundle: nil)
         userDataTableView.register(nib, forCellReuseIdentifier: Constants.dataTableViewCellId)
 
         title = "My parameters"
+        userDataTableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let user = Data.shared.data
+        let user = StoredData.shared.data
         var userName = [String]()
         for name in user {
             userName.append(name.name)
         }
         print(userName)
+
+        userDataTableView.reloadData()
     }
 
     // MARK: - Actions
@@ -60,7 +61,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Data.shared.data.count
+        return StoredData.shared.data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,4 +72,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160.5
+    }
 }

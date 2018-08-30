@@ -9,44 +9,11 @@
 /* Begin PBXBuildFile section */
 		FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */; };
 		FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */; };
-		FA2D4C3F2107F92600FF2A9A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C3E2107F92600FF2A9A /* Data.swift */; };
+		FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C3E2107F92600FF2A9A /* StoredData.swift */; };
 		FA2D4C43210A550300FF2A9A /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C42210A550300FF2A9A /* UserDataViewController.swift */; };
 		FA2D4C472113AC2D00FF2A9A /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C452113AC2D00FF2A9A /* DataTableViewCell.swift */; };
 		FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C462113AC2D00FF2A9A /* DataTableViewCell.xib */; };
 		FA2D4C4C2117570200FF2A9A /* AddingNewMeasureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C4B2117570200FF2A9A /* AddingNewMeasureTableViewController.swift */; };
-		FA2D4C642119983600FF2A9A /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C4D2119983500FF2A9A /* Icon-App-83.5x83.5@2x.png */; };
-		FA2D4C652119983600FF2A9A /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C4E2119983500FF2A9A /* Icon-App-40x40@3x.png */; };
-		FA2D4C662119983600FF2A9A /* Icon-App-72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C4F2119983500FF2A9A /* Icon-App-72x72@2x.png */; };
-		FA2D4C672119983600FF2A9A /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C502119983500FF2A9A /* Icon-App-60x60@3x.png */; };
-		FA2D4C682119983600FF2A9A /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C512119983500FF2A9A /* Icon-App-40x40@2x.png */; };
-		FA2D4C692119983600FF2A9A /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C522119983500FF2A9A /* Icon-App-60x60@1x.png */; };
-		FA2D4C6A2119983600FF2A9A /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C532119983500FF2A9A /* Icon-App-57x57@1x.png */; };
-		FA2D4C6B2119983600FF2A9A /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C542119983500FF2A9A /* Icon-App-20x20@1x.png */; };
-		FA2D4C6C2119983600FF2A9A /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C552119983500FF2A9A /* Icon-App-76x76@2x.png */; };
-		FA2D4C6D2119983600FF2A9A /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C562119983500FF2A9A /* Icon-Small-50x50@1x.png */; };
-		FA2D4C6E2119983600FF2A9A /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C572119983500FF2A9A /* Icon-App-20x20@3x.png */; };
-		FA2D4C6F2119983600FF2A9A /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C582119983500FF2A9A /* Icon-App-20x20@2x.png */; };
-		FA2D4C702119983600FF2A9A /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C592119983500FF2A9A /* Icon-App-29x29@2x.png */; };
-		FA2D4C712119983600FF2A9A /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C5A2119983600FF2A9A /* Icon-App-40x40@1x.png */; };
-		FA2D4C722119983600FF2A9A /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C5B2119983600FF2A9A /* Icon-App-57x57@2x.png */; };
-		FA2D4C732119983600FF2A9A /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C5C2119983600FF2A9A /* Icon-App-76x76@3x.png */; };
-		FA2D4C742119983600FF2A9A /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C5D2119983600FF2A9A /* Icon-App-29x29@3x.png */; };
-		FA2D4C752119983600FF2A9A /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C5E2119983600FF2A9A /* Icon-App-60x60@2x.png */; };
-		FA2D4C762119983600FF2A9A /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C5F2119983600FF2A9A /* Icon-Small-50x50@2x.png */; };
-		FA2D4C772119983600FF2A9A /* Icon-App-72x72@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C602119983600FF2A9A /* Icon-App-72x72@1x.png */; };
-		FA2D4C782119983600FF2A9A /* RoundedIcon1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C612119983600FF2A9A /* RoundedIcon1024x1024.png */; };
-		FA2D4C792119983600FF2A9A /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C622119983600FF2A9A /* Icon-App-29x29@1x.png */; };
-		FA2D4C7A2119983600FF2A9A /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C632119983600FF2A9A /* Icon-App-76x76@1x.png */; };
-		FA2D4C7C21199B7700FF2A9A /* RoundedIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C7B21199B7600FF2A9A /* RoundedIcon58x58.png */; };
-		FA2D4C7E21199BBE00FF2A9A /* RoundedIcon87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C7D21199BBE00FF2A9A /* RoundedIcon87x87.png */; };
-		FA2D4C8121199C1B00FF2A9A /* RoundedIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C7F21199C1B00FF2A9A /* RoundedIcon120x120.png */; };
-		FA2D4C8221199C1B00FF2A9A /* RoundedIcon80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8021199C1B00FF2A9A /* RoundedIcon80x80.png */; };
-		FA2D4C8521199C8E00FF2A9A /* RoundedIcon122x122.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8321199C8E00FF2A9A /* RoundedIcon122x122.png */; };
-		FA2D4C8621199C8E00FF2A9A /* RoundedIcon180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8421199C8E00FF2A9A /* RoundedIcon180x180.png */; };
-		FA2D4C8821199D1C00FF2A9A /* RoundedIcon59x59.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8721199D1C00FF2A9A /* RoundedIcon59x59.png */; };
-		FA2D4C8A21199DBF00FF2A9A /* RoundedIcon152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8921199DBF00FF2A9A /* RoundedIcon152x152.png */; };
-		FA2D4C8C21199DEE00FF2A9A /* RoundedIcon167x167.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8B21199DED00FF2A9A /* RoundedIcon167x167.png */; };
-		FA2D4C8E21199E2900FF2A9A /* RoundedIcon1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2D4C8D21199E2900FF2A9A /* RoundedIcon1024x1024.png */; };
 		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
@@ -58,44 +25,11 @@
 /* Begin PBXFileReference section */
 		FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDataTableViewController.swift; sourceTree = "<group>"; };
 		FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		FA2D4C3E2107F92600FF2A9A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		FA2D4C3E2107F92600FF2A9A /* StoredData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredData.swift; sourceTree = "<group>"; };
 		FA2D4C42210A550300FF2A9A /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		FA2D4C452113AC2D00FF2A9A /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		FA2D4C462113AC2D00FF2A9A /* DataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
 		FA2D4C4B2117570200FF2A9A /* AddingNewMeasureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNewMeasureTableViewController.swift; sourceTree = "<group>"; };
-		FA2D4C4D2119983500FF2A9A /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
-		FA2D4C4E2119983500FF2A9A /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@3x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
-		FA2D4C4F2119983500FF2A9A /* Icon-App-72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-72x72@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-72x72@2x.png"; sourceTree = "<group>"; };
-		FA2D4C502119983500FF2A9A /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@3x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
-		FA2D4C512119983500FF2A9A /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
-		FA2D4C522119983500FF2A9A /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
-		FA2D4C532119983500FF2A9A /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-57x57@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
-		FA2D4C542119983500FF2A9A /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
-		FA2D4C552119983500FF2A9A /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
-		FA2D4C562119983500FF2A9A /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
-		FA2D4C572119983500FF2A9A /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@3x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
-		FA2D4C582119983500FF2A9A /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
-		FA2D4C592119983500FF2A9A /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
-		FA2D4C5A2119983600FF2A9A /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
-		FA2D4C5B2119983600FF2A9A /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-57x57@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
-		FA2D4C5C2119983600FF2A9A /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@3x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
-		FA2D4C5D2119983600FF2A9A /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@3x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
-		FA2D4C5E2119983600FF2A9A /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
-		FA2D4C5F2119983600FF2A9A /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@2x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
-		FA2D4C602119983600FF2A9A /* Icon-App-72x72@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-72x72@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-72x72@1x.png"; sourceTree = "<group>"; };
-		FA2D4C612119983600FF2A9A /* RoundedIcon1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon1024x1024.png; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/RoundedIcon1024x1024.png"; sourceTree = "<group>"; };
-		FA2D4C622119983600FF2A9A /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
-		FA2D4C632119983600FF2A9A /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@1x.png"; path = "../Новая папка/RoundedIcon/ios/AppIcon.appiconset/Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
-		FA2D4C7B21199B7600FF2A9A /* RoundedIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon58x58.png; path = "../новые подставленные с сайта/RoundedIcon58x58.png"; sourceTree = "<group>"; };
-		FA2D4C7D21199BBE00FF2A9A /* RoundedIcon87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon87x87.png; path = "../новые подставленные с сайта/RoundedIcon87x87.png"; sourceTree = "<group>"; };
-		FA2D4C7F21199C1B00FF2A9A /* RoundedIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon120x120.png; path = "../новые подставленные с сайта/RoundedIcon120x120.png"; sourceTree = "<group>"; };
-		FA2D4C8021199C1B00FF2A9A /* RoundedIcon80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon80x80.png; path = "../новые подставленные с сайта/RoundedIcon80x80.png"; sourceTree = "<group>"; };
-		FA2D4C8321199C8E00FF2A9A /* RoundedIcon122x122.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon122x122.png; path = "../новые подставленные с сайта/RoundedIcon122x122.png"; sourceTree = "<group>"; };
-		FA2D4C8421199C8E00FF2A9A /* RoundedIcon180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon180x180.png; path = "../новые подставленные с сайта/RoundedIcon180x180.png"; sourceTree = "<group>"; };
-		FA2D4C8721199D1C00FF2A9A /* RoundedIcon59x59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon59x59.png; path = "../новые подставленные с сайта/RoundedIcon59x59.png"; sourceTree = "<group>"; };
-		FA2D4C8921199DBF00FF2A9A /* RoundedIcon152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon152x152.png; path = "../новые подставленные с сайта/RoundedIcon152x152.png"; sourceTree = "<group>"; };
-		FA2D4C8B21199DED00FF2A9A /* RoundedIcon167x167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon167x167.png; path = "../новые подставленные с сайта/RoundedIcon167x167.png"; sourceTree = "<group>"; };
-		FA2D4C8D21199E2900FF2A9A /* RoundedIcon1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RoundedIcon1024x1024.png; path = "../новые подставленные с сайта/RoundedIcon1024x1024.png"; sourceTree = "<group>"; };
 		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC91D3220CD890000E301B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,7 +70,7 @@
 		FA2D4C3D2107F8E700FF2A9A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FA2D4C3E2107F92600FF2A9A /* Data.swift */,
+				FA2D4C3E2107F92600FF2A9A /* StoredData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -172,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				FAC91D3120CD890000E301B2 /* Fit4Life */,
-				FADAB16B20CDB71D0083D3A4 /* icons */,
 				FAC91D3020CD890000E301B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,47 +134,6 @@
 				FA2D4C3D2107F8E700FF2A9A /* Data */,
 			);
 			path = Fit4Life;
-			sourceTree = "<group>";
-		};
-		FADAB16B20CDB71D0083D3A4 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				FA2D4C542119983500FF2A9A /* Icon-App-20x20@1x.png */,
-				FA2D4C582119983500FF2A9A /* Icon-App-20x20@2x.png */,
-				FA2D4C572119983500FF2A9A /* Icon-App-20x20@3x.png */,
-				FA2D4C622119983600FF2A9A /* Icon-App-29x29@1x.png */,
-				FA2D4C592119983500FF2A9A /* Icon-App-29x29@2x.png */,
-				FA2D4C5D2119983600FF2A9A /* Icon-App-29x29@3x.png */,
-				FA2D4C5A2119983600FF2A9A /* Icon-App-40x40@1x.png */,
-				FA2D4C512119983500FF2A9A /* Icon-App-40x40@2x.png */,
-				FA2D4C4E2119983500FF2A9A /* Icon-App-40x40@3x.png */,
-				FA2D4C532119983500FF2A9A /* Icon-App-57x57@1x.png */,
-				FA2D4C5B2119983600FF2A9A /* Icon-App-57x57@2x.png */,
-				FA2D4C7B21199B7600FF2A9A /* RoundedIcon58x58.png */,
-				FA2D4C522119983500FF2A9A /* Icon-App-60x60@1x.png */,
-				FA2D4C5E2119983600FF2A9A /* Icon-App-60x60@2x.png */,
-				FA2D4C502119983500FF2A9A /* Icon-App-60x60@3x.png */,
-				FA2D4C602119983600FF2A9A /* Icon-App-72x72@1x.png */,
-				FA2D4C4F2119983500FF2A9A /* Icon-App-72x72@2x.png */,
-				FA2D4C632119983600FF2A9A /* Icon-App-76x76@1x.png */,
-				FA2D4C552119983500FF2A9A /* Icon-App-76x76@2x.png */,
-				FA2D4C5C2119983600FF2A9A /* Icon-App-76x76@3x.png */,
-				FA2D4C8021199C1B00FF2A9A /* RoundedIcon80x80.png */,
-				FA2D4C8321199C8E00FF2A9A /* RoundedIcon122x122.png */,
-				FA2D4C8421199C8E00FF2A9A /* RoundedIcon180x180.png */,
-				FA2D4C7F21199C1B00FF2A9A /* RoundedIcon120x120.png */,
-				FA2D4C8721199D1C00FF2A9A /* RoundedIcon59x59.png */,
-				FA2D4C8921199DBF00FF2A9A /* RoundedIcon152x152.png */,
-				FA2D4C8B21199DED00FF2A9A /* RoundedIcon167x167.png */,
-				FA2D4C8D21199E2900FF2A9A /* RoundedIcon1024x1024.png */,
-				FA2D4C4D2119983500FF2A9A /* Icon-App-83.5x83.5@2x.png */,
-				FA2D4C7D21199BBE00FF2A9A /* RoundedIcon87x87.png */,
-				FA2D4C562119983500FF2A9A /* Icon-Small-50x50@1x.png */,
-				FA2D4C5F2119983600FF2A9A /* Icon-Small-50x50@2x.png */,
-				FA2D4C612119983600FF2A9A /* RoundedIcon1024x1024.png */,
-			);
-			name = icons;
-			path = ../Design/icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,42 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC91D4020CD890100E301B2 /* LaunchScreen.storyboard in Resources */,
-				FA2D4C692119983600FF2A9A /* Icon-App-60x60@1x.png in Resources */,
-				FA2D4C742119983600FF2A9A /* Icon-App-29x29@3x.png in Resources */,
-				FA2D4C8C21199DEE00FF2A9A /* RoundedIcon167x167.png in Resources */,
-				FA2D4C6F2119983600FF2A9A /* Icon-App-20x20@2x.png in Resources */,
-				FA2D4C8221199C1B00FF2A9A /* RoundedIcon80x80.png in Resources */,
-				FA2D4C8521199C8E00FF2A9A /* RoundedIcon122x122.png in Resources */,
-				FA2D4C6A2119983600FF2A9A /* Icon-App-57x57@1x.png in Resources */,
-				FA2D4C8821199D1C00FF2A9A /* RoundedIcon59x59.png in Resources */,
 				FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */,
-				FA2D4C752119983600FF2A9A /* Icon-App-60x60@2x.png in Resources */,
-				FA2D4C772119983600FF2A9A /* Icon-App-72x72@1x.png in Resources */,
 				FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */,
-				FA2D4C6B2119983600FF2A9A /* Icon-App-20x20@1x.png in Resources */,
-				FA2D4C702119983600FF2A9A /* Icon-App-29x29@2x.png in Resources */,
-				FA2D4C7C21199B7700FF2A9A /* RoundedIcon58x58.png in Resources */,
-				FA2D4C8621199C8E00FF2A9A /* RoundedIcon180x180.png in Resources */,
-				FA2D4C7A2119983600FF2A9A /* Icon-App-76x76@1x.png in Resources */,
-				FA2D4C8121199C1B00FF2A9A /* RoundedIcon120x120.png in Resources */,
-				FA2D4C782119983600FF2A9A /* RoundedIcon1024x1024.png in Resources */,
-				FA2D4C672119983600FF2A9A /* Icon-App-60x60@3x.png in Resources */,
-				FA2D4C7E21199BBE00FF2A9A /* RoundedIcon87x87.png in Resources */,
-				FA2D4C652119983600FF2A9A /* Icon-App-40x40@3x.png in Resources */,
-				FA2D4C6E2119983600FF2A9A /* Icon-App-20x20@3x.png in Resources */,
-				FA2D4C762119983600FF2A9A /* Icon-Small-50x50@2x.png in Resources */,
 				FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */,
-				FA2D4C792119983600FF2A9A /* Icon-App-29x29@1x.png in Resources */,
-				FA2D4C6D2119983600FF2A9A /* Icon-Small-50x50@1x.png in Resources */,
-				FA2D4C722119983600FF2A9A /* Icon-App-57x57@2x.png in Resources */,
-				FA2D4C8E21199E2900FF2A9A /* RoundedIcon1024x1024.png in Resources */,
-				FA2D4C682119983600FF2A9A /* Icon-App-40x40@2x.png in Resources */,
-				FA2D4C642119983600FF2A9A /* Icon-App-83.5x83.5@2x.png in Resources */,
-				FA2D4C712119983600FF2A9A /* Icon-App-40x40@1x.png in Resources */,
-				FA2D4C8A21199DBF00FF2A9A /* RoundedIcon152x152.png in Resources */,
-				FA2D4C732119983600FF2A9A /* Icon-App-76x76@3x.png in Resources */,
-				FA2D4C6C2119983600FF2A9A /* Icon-App-76x76@2x.png in Resources */,
-				FA2D4C662119983600FF2A9A /* Icon-App-72x72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2D4C3F2107F92600FF2A9A /* Data.swift in Sources */,
+				FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */,
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
 				FA2D4C43210A550300FF2A9A /* UserDataViewController.swift in Sources */,

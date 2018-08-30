@@ -64,27 +64,52 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         hipRightTextField.delegate = self
         hipLeftTextField.delegate = self
 
+        
 
         title = "Create User"
+        
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
 
-        heightTextField.inputAccessoryView = makeToolBar(type: .next)
-
+        heightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.height.rawValue)
+        weightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.weight.rawValue)
+        chestTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.chest.rawValue)
+        waistTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.waist.rawValue)
+        neckTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.neck.rawValue)
+        bicepsRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicRight.rawValue)
+        bicepsLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicLeft.rawValue)
+        hipRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipRight.rawValue)
+        hipLeftTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.hipLeft.rawValue)
     }
 
-    private func makeToolBar(type: TypingResultButtonType) -> UIToolbar {
+    private func makeToolBar(type: TypingResultButtonType, tag: Int) -> UIToolbar {
         let toolbar = UIToolbar()
         let doneButton = UIBarButtonItem(title: type.rawValue, style: .done, target: nil, action:  #selector(doneAction))
+        doneButton.tag = tag
         let flexibleItem = UIBarButtonItem(barButtonSystemItem:  .flexibleSpace, target: nil, action: nil)
         toolbar.items = [flexibleItem, doneButton]
         toolbar.sizeToFit()
         return toolbar
     }
 
-    @objc private func doneAction() {
-        view.endEditing(true)
+    @objc private func doneAction(sender: UIBarButtonItem) {
+        print(sender.tag)
+
+        guard let textField = TextField(rawValue: sender.tag) else { return }
+
+        switch textField {
+        case .height: weightTextField.becomeFirstResponder()
+        case .weight: chestTextField.becomeFirstResponder()
+        case .chest: waistTextField.becomeFirstResponder()
+        case .waist: neckTextField.becomeFirstResponder()
+        case .neck: bicepsRightTextField.becomeFirstResponder()
+        case .bicRight: bicepsLeftTextField.becomeFirstResponder()
+        case .bicLeft: hipRightTextField.becomeFirstResponder()
+        case .hipRight: hipLeftTextField.becomeFirstResponder()
+        case .hipLeft: view.endEditing(true)
+        }
+
     }
 
     // MARK: - Actions
@@ -179,7 +204,11 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 }
 
-enum TypingResultButtonType: String {
+private enum TypingResultButtonType: String {
     case next = "Next"
     case done = "Done"
+}
+
+private enum  TextField: Int {
+    case height = 10, weight, chest, waist, neck, bicRight, bicLeft, hipRight, hipLeft
 }

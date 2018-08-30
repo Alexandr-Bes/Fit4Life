@@ -35,10 +35,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
     // MARK: - Actions
 
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
-
-        let returnToUserDataViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
-
-        present(returnToUserDataViewController, animated: true)
+        dismiss(animated: true)
     }
 
     @IBAction func saveNewMeasureButton(_ sender: UIBarButtonItem) {
