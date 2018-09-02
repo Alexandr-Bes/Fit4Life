@@ -9,6 +9,7 @@
 import Foundation
 
 class StoredData {
+    
     static var shared = StoredData()
 
     var data = [UserData]()

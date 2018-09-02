@@ -94,7 +94,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 
     @objc private func doneAction(sender: UIBarButtonItem) {
-        print(sender.tag)
 
         guard let textField = TextField(rawValue: sender.tag) else { return }
 
@@ -116,36 +115,54 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     @IBAction func saveDataButton(_ sender: Any) {
 
+        if (nameTextField.text?.isEmpty)! ||
+            (heightTextField.text?.isEmpty)! ||
+            (weightTextField.text?.isEmpty)! {
+                displayMassage(userMassage: "Sorry, you have to write at least your name, height, and weight")
+                return
+        }
+
+
         guard let name = nameTextField.text,
             let heightString = heightTextField.text,
             let heightDouble = Double(heightString),
             let weightString = weightTextField.text,
             let weightDouble = Double(weightString),
             let chestString = chestTextField.text,
-            let chestDouble = Double(chestString),
+//            let chestDouble = Double(chestString),
             let waistString = waistTextField.text,
-            let waistDouble = Double(waistString),
+//            let waistDouble = Double(waistString),
             let neckString = neckTextField.text,
-            let neckDouble = Double(neckString),
+//            let neckDouble = Double(neckString),
             let bicRightString = bicepsRightTextField.text,
-            let bicRightDouble = Double(bicRightString),
+//            let bicRightDouble = Double(bicRightString),
             let bicLeftString = bicepsLeftTextField.text,
-            let bicLeftDouble = Double(bicLeftString),
+//            let bicLeftDouble = Double(bicLeftString),
             let hipRightString = hipRightTextField.text,
-            let hipRightDouble = Double(hipRightString),
-            let hipLeftString = hipLeftTextField.text,
-            let hipLeftDouble = Double(hipLeftString)
+//            let hipRightDouble = Double(hipRightString),
+            let hipLeftString = hipLeftTextField.text
+//            let hipLeftDouble = Double(hipLeftString)
+
         else {
-            displayMassage(userMassage: "Sorry, can't save new user because it has wrong input values")
+//            displayMassage(userMassage: "Sorry, can't save new user because it has wrong input values")
             return
         }
 
-        let newUser = UserData(name: name, height: heightDouble, weight: weightDouble, chest: chestDouble, waist: waistDouble, neck: neckDouble, bicRight: bicRightDouble, bicLeft: bicLeftDouble, hipRight: hipRightDouble, hipLeft: hipLeftDouble, manWoman: true)
+        let ifEmptyChest = chestString == "" ? "0.0" : chestString
+        let ifEmptyWaist = waistString == "" ? "0.0" : waistString
+        let ifEmptyNeck = neckString == "" ? "0.0" : neckString
+        let ifEmptyBicR = bicRightString == "" ? "0.0" : bicRightString
+        let ifEmptyBicL = bicLeftString == "" ? "0.0" : bicLeftString
+        let ifEmptyHipR = hipRightString == "" ? "0.0" : hipRightString
+        let ifEmptyHipL = hipLeftString == "" ? "0.0" : hipLeftString
+
+        let newUser = UserData(name: name, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+
+//        StoredData.shared.data.append(newUser)
 
         let linkToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
 
         present(linkToMainTabBarController, animated: true)
-
 
         print(newUser.description)
 

@@ -19,12 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="383" height="160.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-9k-XG2">
-                        <rect key="frame" x="170.5" y="14" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnh-GH-SVK">
                         <rect key="frame" x="16" y="42" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -55,32 +49,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fxN-z4-PAp">
-                        <rect key="frame" x="98" y="118" width="188" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="188" id="3Y4-oV-viC"/>
-                            <constraint firstAttribute="height" constant="30" id="kWM-qw-BbW"/>
-                        </constraints>
-                        <date key="date" timeIntervalSinceReferenceDate="555164813.291044">
-                            <!--2018-08-05 12:26:53 +0000-->
-                        </date>
-                    </datePicker>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Be-Gi-BnE">
+                        <rect key="frame" x="222" y="120" width="145" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6Be-Gi-BnE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="222" id="0fL-9t-bIy"/>
                     <constraint firstAttribute="trailing" secondItem="bsw-9h-ZA4" secondAttribute="trailing" constant="16" id="7eG-gr-fEg"/>
                     <constraint firstItem="3ve-7Y-Fo0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="42" id="E9c-Vj-gxf"/>
                     <constraint firstAttribute="bottom" secondItem="pBI-sS-1yT" secondAttribute="bottom" constant="40" id="Jrb-sh-2oK"/>
+                    <constraint firstItem="6Be-Gi-BnE" firstAttribute="top" secondItem="bsw-9h-ZA4" secondAttribute="bottom" constant="29" id="MSK-Lf-TYp"/>
+                    <constraint firstAttribute="bottom" secondItem="6Be-Gi-BnE" secondAttribute="bottom" constant="10.5" id="N1b-hk-I6H"/>
                     <constraint firstItem="Cnh-GH-SVK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="42" id="NhJ-JS-3cz"/>
                     <constraint firstItem="bsw-9h-ZA4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="R36-Xv-LhO"/>
-                    <constraint firstItem="wP9-9k-XG2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ttv-z4-HGz"/>
                     <constraint firstItem="kV6-Em-gLZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Z1K-Pu-efq"/>
+                    <constraint firstAttribute="trailing" secondItem="6Be-Gi-BnE" secondAttribute="trailing" constant="16" id="ciq-RE-bDL"/>
                     <constraint firstAttribute="trailing" secondItem="3ve-7Y-Fo0" secondAttribute="trailing" constant="16" id="eFh-wz-tAf"/>
                     <constraint firstItem="Cnh-GH-SVK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="g5Z-B2-gsy"/>
                     <constraint firstItem="kV6-Em-gLZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gfc-MQ-Ndl"/>
                     <constraint firstItem="pBI-sS-1yT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kU2-m8-2X3"/>
-                    <constraint firstAttribute="bottom" secondItem="fxN-z4-PAp" secondAttribute="bottom" constant="12" id="na1-oO-0Th"/>
-                    <constraint firstItem="fxN-z4-PAp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="u5D-31-3vk"/>
-                    <constraint firstItem="wP9-9k-XG2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="yeu-gh-5Ea"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -88,6 +78,7 @@
                 <outlet property="bicLeftLabel" destination="bsw-9h-ZA4" id="RGk-w3-Y5A"/>
                 <outlet property="bicRightLabel" destination="3ve-7Y-Fo0" id="qGU-bm-rVd"/>
                 <outlet property="chestLabel" destination="kV6-Em-gLZ" id="Bz3-bs-bUV"/>
+                <outlet property="dateOfMeasure" destination="6Be-Gi-BnE" id="Cl9-91-F7X"/>
                 <outlet property="waistLabel" destination="pBI-sS-1yT" id="aw7-Is-ydh"/>
                 <outlet property="weightLabel" destination="Cnh-GH-SVK" id="b0U-jf-gr7"/>
             </connections>

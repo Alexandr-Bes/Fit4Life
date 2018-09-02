@@ -33,7 +33,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         let nib = UINib(nibName: Constants.dataTableViewCellId, bundle: nil)
         userDataTableView.register(nib, forCellReuseIdentifier: Constants.dataTableViewCellId)
 
-        title = "My parameters"
+        title = "My  parameters"
         userDataTableView.tableFooterView = UIView()
     }
 
