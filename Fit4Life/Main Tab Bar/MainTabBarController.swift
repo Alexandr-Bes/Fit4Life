@@ -10,5 +10,12 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
-    
+    override func viewDidLoad() {
+        setupUI()
+
+    }
+
+    private func setupUI() {
+
+    }
 }

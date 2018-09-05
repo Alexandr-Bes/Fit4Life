@@ -14,7 +14,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
-  
     @IBOutlet weak var chestTextField: UITextField!
     @IBOutlet weak var waistTextField: UITextField!
     @IBOutlet weak var neckTextField: UITextField!
@@ -129,22 +128,14 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             let weightString = weightTextField.text,
             let weightDouble = Double(weightString),
             let chestString = chestTextField.text,
-//            let chestDouble = Double(chestString),
             let waistString = waistTextField.text,
-//            let waistDouble = Double(waistString),
             let neckString = neckTextField.text,
-//            let neckDouble = Double(neckString),
             let bicRightString = bicepsRightTextField.text,
-//            let bicRightDouble = Double(bicRightString),
             let bicLeftString = bicepsLeftTextField.text,
-//            let bicLeftDouble = Double(bicLeftString),
             let hipRightString = hipRightTextField.text,
-//            let hipRightDouble = Double(hipRightString),
             let hipLeftString = hipLeftTextField.text
-//            let hipLeftDouble = Double(hipLeftString)
 
         else {
-//            displayMassage(userMassage: "Sorry, can't save new user because it has wrong input values")
             return
         }
 
@@ -160,7 +151,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
 //        StoredData.shared.data.append(newUser)
 
-        let linkToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
+        let linkToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
         present(linkToMainTabBarController, animated: true)
 
@@ -178,7 +169,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         }
     }
 
-    //MARK: - UI Text Field Delegate methods
+    // MARK: - UI Text Field Delegate methods
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
@@ -203,7 +194,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         return true
     }
 
-    //MARK: - Alert message
+    // MARK: - Alert message
     
     func displayMassage(userMassage:String) -> Void {
         DispatchQueue.main.async {

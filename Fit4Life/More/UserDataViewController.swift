@@ -33,7 +33,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         let nib = UINib(nibName: Constants.dataTableViewCellId, bundle: nil)
         userDataTableView.register(nib, forCellReuseIdentifier: Constants.dataTableViewCellId)
 
-        title = "My  parameters"
+        title = "My parameters"
         userDataTableView.tableFooterView = UIView()
     }
 
@@ -41,13 +41,14 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
 
         let user = StoredData.shared.data
+
         var userName = [String]()
         for name in user {
             userName.append(name.name)
         }
         print(userName)
 
-        userDataTableView.reloadData()
+//        userDataTableView.reloadData()
     }
 
     // MARK: - Actions
@@ -59,6 +60,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         present(linkToAddingNewMeasureTableViewController, animated: true)
     }
 
+    // MARK: - UI Table View Delegate and Data Source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return StoredData.shared.data.count
@@ -67,12 +69,15 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataTableViewCellId, for: indexPath) as! DataTableViewCell
-
-        cell.weightLabel.text = "Your weight"
+        cell.weightLabel.text = "12"
         return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataTableViewCellId, for: indexPath) as! DataTableViewCell
+//
+//        cell.weightLabel.text = "Your weight"
+//        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160.5
+        return 120
     }
 }
