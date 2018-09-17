@@ -15,21 +15,20 @@ class DataTableViewCell: UITableViewCell {
     @IBOutlet weak var waistLabel: UILabel!
     @IBOutlet weak var bicRightLabel: UILabel!
     @IBOutlet weak var bicLeftLabel: UILabel!
-    @IBOutlet weak var dateOfMeasureTextField: UITextField!
 
     // MARK: - Private properties
 
-    private var datePicker: UIDatePicker?
+//    private var datePicker: UIDatePicker?
 
     // MARK: - Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-
-        dateOfMeasureTextField.inputView = datePicker
+//        datePicker = UIDatePicker()
+//        datePicker?.datePickerMode = .date
+//
+//        dateOfMeasureTextField.inputView = datePicker
         setupUI()
     }
 

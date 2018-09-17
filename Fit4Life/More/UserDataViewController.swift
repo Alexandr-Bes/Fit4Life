@@ -48,7 +48,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         }
         print(userName)
 
-//        userDataTableView.reloadData()
+        userDataTableView.reloadData()
     }
 
     // MARK: - Actions
@@ -72,7 +72,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         cell.weightLabel.text = "12"
         return cell
 //        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataTableViewCellId, for: indexPath) as! DataTableViewCell
-//
+//  
 //        cell.weightLabel.text = "Your weight"
 //        return cell
     }

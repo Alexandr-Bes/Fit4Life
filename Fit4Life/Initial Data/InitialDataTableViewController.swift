@@ -41,6 +41,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     // MARK: - Private Methods
 
     private func setupUI() {
+
         nameTextField.keyboardType = .namePhonePad
         heightTextField.keyboardType = .decimalPad
         weightTextField.keyboardType = .decimalPad
@@ -117,10 +118,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         if (nameTextField.text?.isEmpty)! ||
             (heightTextField.text?.isEmpty)! ||
             (weightTextField.text?.isEmpty)! {
-                displayMassage(userMassage: "Sorry, you have to write at least your name, height, and weight")
+                displayMassage(userMassage: "Sorry, you have to set at least your name, height, and weight")
                 return
         }
-
 
         guard let name = nameTextField.text,
             let heightString = heightTextField.text,
@@ -149,7 +149,8 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
         let newUser = UserData(name: name, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
 
-//        StoredData.shared.data.append(newUser)
+//        Check!!
+        StoredData.shared.data.append(newUser)
 
         let linkToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
