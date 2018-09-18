@@ -11,10 +11,7 @@ import UIKit
 class DataTableViewCell: UITableViewCell {
 
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var chestLabel: UILabel!
     @IBOutlet weak var waistLabel: UILabel!
-    @IBOutlet weak var bicRightLabel: UILabel!
-    @IBOutlet weak var bicLeftLabel: UILabel!
 
     // MARK: - Private properties
 
@@ -25,10 +22,6 @@ class DataTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-//        datePicker = UIDatePicker()
-//        datePicker?.datePickerMode = .date
-//
-//        dateOfMeasureTextField.inputView = datePicker
         setupUI()
     }
 
@@ -42,8 +35,10 @@ class DataTableViewCell: UITableViewCell {
     private func setupUI() {
         weightLabel.font = UIFont.boldSystemFont(ofSize: 18)
 
-        bicRightLabel.textColor = UIColor.darkGray
-        bicLeftLabel.textColor = UIColor.darkGray
     }
-    
+
+    func configure(data: UserData) {
+        weightLabel.text = "\(data.weight)kg"
+    }
+
 }

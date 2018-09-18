@@ -139,6 +139,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             return
         }
 
+//        let ifEmptyName = name == "" ? StoredData.shared.data
+//        let ifEmptyHeight = heightString == "" ? "0.0" : heightString
+//        let ifEmptyWeight = weightString == "" ? "0.0" : weightString
         let ifEmptyChest = chestString == "" ? "0.0" : chestString
         let ifEmptyWaist = waistString == "" ? "0.0" : waistString
         let ifEmptyNeck = neckString == "" ? "0.0" : neckString

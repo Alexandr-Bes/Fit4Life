@@ -69,15 +69,13 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataTableViewCellId, for: indexPath) as! DataTableViewCell
-        cell.weightLabel.text = "12"
+
+        let measurement = StoredData.shared.data[indexPath.row]
+        cell.configure(data: measurement)
         return cell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataTableViewCellId, for: indexPath) as! DataTableViewCell
-//  
-//        cell.weightLabel.text = "Your weight"
-//        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 49.5
     }
 }
