@@ -12,6 +12,11 @@ class ExercisesViewController: UIViewController {
 
     // MARK: - Private properties
 
+    private struct Constants {
+        static let exStoryboard = "Exercises"
+        static let exVC = "SomeNewViewController"
+    }
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -25,4 +30,12 @@ class ExercisesViewController: UIViewController {
     private func setupUI() {
         title = "Muscle Group"
     }
+
+    @IBAction func goToAnother(_ sender: Any) {
+
+        let goToVC = UIStoryboard(name: Constants.exStoryboard, bundle: nil).instantiateViewController(withIdentifier: Constants.exVC)
+
+        navigationController?.pushViewController(goToVC, animated: true)
+    }
+
 }

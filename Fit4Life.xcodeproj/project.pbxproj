@@ -17,6 +17,8 @@
 		FA43317F213DDD2F00378004 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43317E213DDD2F00378004 /* ExercisesViewController.swift */; };
 		FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433180213DDE2700378004 /* WorkoutsViewController.swift */; };
 		FA433183213DE2E300378004 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433182213DE2E300378004 /* LogsViewController.swift */; };
+		FA6338652157FC87001CD42E /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6338642157FC87001CD42E /* Exercises.storyboard */; };
+		FA6338682157FDC2001CD42E /* SomeNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6338662157FDC2001CD42E /* SomeNewViewController.swift */; };
 		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		FA43317E213DDD2F00378004 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		FA433180213DDE2700378004 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		FA433182213DE2E300378004 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		FA6338642157FC87001CD42E /* Exercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exercises.storyboard; sourceTree = "<group>"; };
+		FA6338662157FDC2001CD42E /* SomeNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeNewViewController.swift; sourceTree = "<group>"; };
 		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC91D3220CD890000E301B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				FA43317E213DDD2F00378004 /* ExercisesViewController.swift */,
+				FA6338642157FC87001CD42E /* Exercises.storyboard */,
+				FA6338662157FDC2001CD42E /* SomeNewViewController.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 				TargetAttributes = {
 					FAC91D2E20CD890000E301B2 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -239,6 +246,7 @@
 				FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */,
 				FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */,
 				FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */,
+				FA6338652157FC87001CD42E /* Exercises.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6338682157FDC2001CD42E /* SomeNewViewController.swift in Sources */,
 				FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */,
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
@@ -413,7 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.private.Fit4Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,7 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.private.Fit4Life;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

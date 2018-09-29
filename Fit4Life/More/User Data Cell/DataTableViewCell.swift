@@ -38,7 +38,7 @@ class DataTableViewCell: UITableViewCell {
     }
 
     func configure(data: UserData) {
-        weightLabel.text = "\(data.weight)kg"
-    }
+            weightLabel.text = "\(data.weight ?? 0.0)kg"
 
+    }
 }

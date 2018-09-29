@@ -10,9 +10,9 @@ import Foundation
 
 class UserData {
 
-    var name: String
-    var height: Double
-    var weight: Double
+    var name: String?
+    var height: Double?
+    var weight: Double?
     var chest: Double?
     var waist: Double?
     var neck: Double?
@@ -48,6 +48,6 @@ class UserData {
     }
 
     var description: String {
-        return "name: \(name); height: \(height); weight: \(weight); chest: \(chest ?? 0.0); waist: \(waist ?? 0.0); neck: \(neck ?? 0.0); bicRight: \(bicRight ?? 0.0); bicLeft: \(bicLeft ?? 0.0); hipRight: \(hipRight ?? 0.0); hipLeft: \(hipLeft ?? 0.0); manWoman: \(manWoman)"
+        return "name: \(name ?? "No name"); height: \(height ?? 0.0); weight: \(weight ?? 0.0); chest: \(chest ?? 0.0); waist: \(waist ?? 0.0); neck: \(neck ?? 0.0); bicRight: \(bicRight ?? 0.0); bicLeft: \(bicLeft ?? 0.0); hipRight: \(hipRight ?? 0.0); hipLeft: \(hipLeft ?? 0.0); manWoman: \(manWoman)"
     }
 }

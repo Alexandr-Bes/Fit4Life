@@ -117,19 +117,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         }
     }
 
-//    @objc private func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-//                view.endEditing(true)
-//    }
-//
-//    @objc private func dateChanged (datePicker: UIDatePicker) {
-//
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd.MM.yyyy"
-//
-//        setDateTextField.text = dateFormatter.string(from: datePicker.date)
-//        view.endEditing(true)
-//    }
-
     // MARK: - Actions
 
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
@@ -137,6 +124,10 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
     }
 
     @IBAction func saveNewMeasureButton(_ sender: Any) {
+
+        if (weightTextField.text?.isEmpty)! {
+            displayMassage(userMassage: "Sorry, you have to type at least your weight")
+        }
 
         guard let weightString =  weightTextField.text,
             let weightDouble = Double(weightString),

@@ -44,7 +44,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
 
         var userName = [String]()
         for name in user {
-            userName.append(name.name)
+            userName.append(name.name ?? "No name")
         }
         print(userName)
 
