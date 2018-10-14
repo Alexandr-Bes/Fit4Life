@@ -11,7 +11,7 @@ import UIKit
 class DataTableViewCell: UITableViewCell {
 
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var waistLabel: UILabel!
+    @IBOutlet weak var dateOfMeasurement: UILabel!
 
     // MARK: - Private properties
 
@@ -39,6 +39,6 @@ class DataTableViewCell: UITableViewCell {
 
     func configure(data: UserData) {
             weightLabel.text = "\(data.weight ?? 0.0)kg"
-
+            dateOfMeasurement.text = "\(data.date ?? "Not set")"
     }
 }

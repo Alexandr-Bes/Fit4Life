@@ -21,6 +21,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak var hipLeftTextField: UITextField!
     @IBOutlet weak var setDateTextField: UITextField!
 
+
     // MARK: - Private properties
 
     private struct Constants {
@@ -29,7 +30,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         static let tabBarViewController = "MainTabBarController"
     }
 
-//    private var datePicker: UIDatePicker?
+      private  var dateString = String()
 
     // MARK: Lifecycle
 
@@ -42,7 +43,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
     private func setupUI() {
 
-// Keyboard for text fields
+        // Keyboard for text fields
         weightTextField.keyboardType = .decimalPad
         chestTextField.keyboardType = .decimalPad
         waistTextField.keyboardType = .decimalPad
@@ -61,18 +62,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         hipRightTextField.delegate = self
         hipLeftTextField.delegate = self
 
-
-
-// Date Picker
-//        datePicker = UIDatePicker()
-//        datePicker?.datePickerMode = .date
-//        datePicker?.addTarget(self, action: #selector(AddingNewMeasureTableViewController.dateChanged(datePicker:)), for: .valueChanged)
-//
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddingNewMeasureTableViewController.viewTapped(gestureRecognizer:)))
-//
-//        view.addGestureRecognizer(tapGesture)
-//        setDateTextField.inputView = datePicker
-
         title = "New Measure"
 
         tableView.allowsSelection = false
@@ -86,7 +75,15 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         bicRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicRight.rawValue)
         bicLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicLeft.rawValue)
         hipRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipRight.rawValue)
-        hipLeftTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.hipLeft.rawValue)
+        hipLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipLeft.rawValue)
+        setDateTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.setDate.rawValue)
+
+        let datepicker = UIDatePicker()
+        datepicker.datePickerMode = UIDatePicker.Mode.date
+        datepicker.addTarget(self, action: #selector(AddingNewMeasureTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+
+        setDateTextField.inputView = datepicker
+
     }
 
     // Tool Bar
@@ -100,7 +97,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         return toolbar
     }
 
-// Done Action Tool Bar
+    // Done Action Tool Bar
     @objc private func doneAction(sender: UIBarButtonItem) {
 
         guard let textField = TextField(rawValue: sender.tag) else { return }
@@ -113,8 +110,18 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         case .bicRight: bicLeftTextField.becomeFirstResponder()
         case .bicLeft: hipRightTextField.becomeFirstResponder()
         case .hipRight: hipLeftTextField.becomeFirstResponder()
-        case .hipLeft: view.endEditing(true)
+        case .hipLeft: setDateTextField.becomeFirstResponder()
+        case .setDate: view.endEditing(true)
         }
+    }
+
+    // DatePicker
+    @objc private func datePickerValueChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        setDateTextField.text = formatter.string(from: sender.date)
+        dateString = formatter.string(from: sender.date)
     }
 
     // MARK: - Actions
@@ -127,6 +134,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
         if (weightTextField.text?.isEmpty)! {
             displayMassage(userMassage: "Sorry, you have to type at least your weight")
+            return
         }
 
         guard let weightString =  weightTextField.text,
@@ -143,7 +151,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
                 return
         }
 
-//        let ifEmptyWeight = weightString == "" ? "0.0" : weightString
         let ifEmptyChest = chestString == "" ? "0.0" : chestString
         let ifEmptyWaist = waistString == "" ? "0.0" : waistString
         let ifEmptyNeck = neckString == "" ? "0.0" : neckString
@@ -152,7 +159,17 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         let ifEmptyHipR = hipRightString == "" ? "0.0" : hipRightString
         let ifEmptyHipL = hipLeftString == "" ? "0.0" : hipLeftString
 
-        let newUser = UserData(name: "SS", height: 100, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+
+        // If setDateTextField is empty put today date in UserData
+        guard let dateWrapped = setDateTextField.text?.isEmpty else { return }
+        if dateWrapped == true {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = DateFormatter.Style.medium
+            dateString = dateFormatter.string(from: Date())
+            setDateTextField.text = dateString
+        }
+
+        let newUser = UserData(date: dateString, height: 100, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
 
         StoredData.shared.data.append(newUser)
 
@@ -162,7 +179,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
         print(newUser.description)
     }
-
 
 
     // MARK: - UI Text Field Delegate methods
@@ -183,18 +199,24 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         } else if textField == hipRightTextField {
             hipLeftTextField.becomeFirstResponder()
         } else if textField == hipLeftTextField {
+            setDateTextField.becomeFirstResponder()
+        } else if textField == setDateTextField{
             view.endEditing(true)
         }
         return true
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+
     // MARK: - Alert message
-    func displayMassage(userMassage:String) -> Void {
+    func displayMassage(userMassage: String) -> Void {
         DispatchQueue.main.async {
             let alertContoller = UIAlertController(title: "Error", message: userMassage, preferredStyle: .alert)
 
             let OkAction = UIAlertAction(title: "OK", style: .destructive) {
-                (action:UIAlertAction!) in
+                (action: UIAlertAction!) in
                 DispatchQueue.main.async {
                     self.dismiss(animated: true, completion: nil)
                 }
@@ -211,5 +233,5 @@ private enum TypingResultButtonType: String {
 }
 
 private enum  TextField: Int {
-    case weight = 10, chest, waist, neck, bicRight, bicLeft, hipRight, hipLeft
+    case weight = 10, chest, waist, neck, bicRight, bicLeft, hipRight, hipLeft, setDate
 }

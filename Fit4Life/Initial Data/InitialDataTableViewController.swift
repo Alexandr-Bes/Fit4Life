@@ -64,8 +64,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         hipRightTextField.delegate = self
         hipLeftTextField.delegate = self
 
-        
-
         title = "Create User"
         
         tableView.allowsSelection = false
@@ -139,9 +137,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             return
         }
 
-//        let ifEmptyName = name == "" ? StoredData.shared.data
-//        let ifEmptyHeight = heightString == "" ? "0.0" : heightString
-//        let ifEmptyWeight = weightString == "" ? "0.0" : weightString
         let ifEmptyChest = chestString == "" ? "0.0" : chestString
         let ifEmptyWaist = waistString == "" ? "0.0" : waistString
         let ifEmptyNeck = neckString == "" ? "0.0" : neckString
@@ -150,9 +145,8 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         let ifEmptyHipR = hipRightString == "" ? "0.0" : hipRightString
         let ifEmptyHipL = hipLeftString == "" ? "0.0" : hipLeftString
 
-        let newUser = UserData(name: name, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+        let newUser = UserData(date: name, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
 
-//        Check!!
         StoredData.shared.data.append(newUser)
 
         let linkToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
@@ -163,10 +157,17 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     }
 
+    @IBAction func dateTextField(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+//        datePickerView.addTarget(self, action: #selector(InitialDataTableViewController), for: UIControl.Event.valueChanged)
+    }
+
     @IBAction func manOrWomanToggle(_ sender: UISegmentedControl) {
 
         if sender.selectedSegmentIndex == 0 {
-            print("man")
+            print("Man")
 
         } else {
             print("Woman")
@@ -214,6 +215,12 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             self.present(alertContoller, animated: true, completion: nil)
         }
     }
+
+//    func datePickerValueChanged(sender:UIDatePicker) {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateStyle = .medium
+//
+//    }
 }
 
 private enum TypingResultButtonType: String {

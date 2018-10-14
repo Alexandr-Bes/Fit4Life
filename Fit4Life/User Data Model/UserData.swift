@@ -10,7 +10,7 @@ import Foundation
 
 class UserData {
 
-    var name: String?
+    var date: String?
     var height: Double?
     var weight: Double?
     var chest: Double?
@@ -22,7 +22,7 @@ class UserData {
     var hipLeft: Double?
     var manWoman: Bool
 
-    init(name: String,
+    init(date: String,
          height: Double,
          weight: Double,
          chest: Double?,
@@ -34,7 +34,7 @@ class UserData {
          hipLeft: Double?,
          manWoman: Bool) {
 
-        self.name = name
+        self.date = date
         self.height = height
         self.weight = weight
         self.chest = chest
@@ -48,6 +48,6 @@ class UserData {
     }
 
     var description: String {
-        return "name: \(name ?? "No name"); height: \(height ?? 0.0); weight: \(weight ?? 0.0); chest: \(chest ?? 0.0); waist: \(waist ?? 0.0); neck: \(neck ?? 0.0); bicRight: \(bicRight ?? 0.0); bicLeft: \(bicLeft ?? 0.0); hipRight: \(hipRight ?? 0.0); hipLeft: \(hipLeft ?? 0.0); manWoman: \(manWoman)"
+        return "date: \(date ?? "No set"); height: \(height ?? 0.0); weight: \(weight ?? 0.0); chest: \(chest ?? 0.0); waist: \(waist ?? 0.0); neck: \(neck ?? 0.0); bicRight: \(bicRight ?? 0.0); bicLeft: \(bicLeft ?? 0.0); hipRight: \(hipRight ?? 0.0); hipLeft: \(hipLeft ?? 0.0); manWoman: \(manWoman)"
     }
 }

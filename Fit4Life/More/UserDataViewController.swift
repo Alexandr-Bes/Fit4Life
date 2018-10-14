@@ -26,15 +26,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        userDataTableView.delegate = self
-        userDataTableView.dataSource = self
-
-        let nib = UINib(nibName: Constants.dataTableViewCellId, bundle: nil)
-        userDataTableView.register(nib, forCellReuseIdentifier: Constants.dataTableViewCellId)
-
-        title = "My parameters"
-        userDataTableView.tableFooterView = UIView()
+        setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,13 +34,30 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
 
         let user = StoredData.shared.data
 
-        var userName = [String]()
-        for name in user {
-            userName.append(name.name ?? "No name")
+        var userWeight = [Double]()
+        for weight in user {
+            userWeight.append(weight.weight ?? 0.0)
         }
-        print(userName)
+        print(userWeight)
 
         userDataTableView.reloadData()
+    }
+
+    // MARK: - Private properties
+
+    private func setupUI() {
+
+        userDataTableView.delegate = self
+        userDataTableView.dataSource = self
+
+        title = "My parameters"
+
+        userDataTableView.tableFooterView = UIView()
+        userDataTableView.allowsSelection = false
+        userDataTableView.keyboardDismissMode = .onDrag
+
+        let nib = UINib(nibName: Constants.dataTableViewCellId, bundle: nil)
+        userDataTableView.register(nib, forCellReuseIdentifier: Constants.dataTableViewCellId)
     }
 
     // MARK: - Actions

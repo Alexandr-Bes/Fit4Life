@@ -29,6 +29,7 @@ class ExercisesViewController: UIViewController {
 
     private func setupUI() {
         title = "Muscle Group"
+
     }
 
     @IBAction func goToAnother(_ sender: Any) {
