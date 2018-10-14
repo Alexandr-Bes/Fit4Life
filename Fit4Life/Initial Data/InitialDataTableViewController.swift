@@ -21,6 +21,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     @IBOutlet weak var bicepsLeftTextField: UITextField!
     @IBOutlet weak var hipRightTextField: UITextField!
     @IBOutlet weak var hipLeftTextField: UITextField!
+    @IBOutlet weak var setDateTextField: UITextField!
 
 
     // MARK: - Private properties
@@ -29,6 +30,8 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         static let mainStoryBoardName = "Main"
         static let tabBarViewController = "MainTabBarController"
     }
+
+    private var dateString = String()
 
     // MARK: - Lifecycle
 
@@ -42,6 +45,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     private func setupUI() {
 
+        // Keyboard for text fields
         nameTextField.keyboardType = .namePhonePad
         heightTextField.keyboardType = .decimalPad
         weightTextField.keyboardType = .decimalPad
@@ -78,9 +82,19 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         bicepsRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicRight.rawValue)
         bicepsLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicLeft.rawValue)
         hipRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipRight.rawValue)
-        hipLeftTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.hipLeft.rawValue)
+        hipLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipLeft.rawValue)
+        setDateTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.setDate.rawValue)
+
+        // DatePicker
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.addTarget(self, action: #selector(InitialDataTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+
+        setDateTextField.inputView = datePicker
     }
 
+
+    // ToolBar
     private func makeToolBar(type: TypingResultButtonType, tag: Int) -> UIToolbar {
         let toolbar = UIToolbar()
         let doneButton = UIBarButtonItem(title: type.rawValue, style: .done, target: nil, action:  #selector(doneAction))
@@ -104,10 +118,21 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         case .bicRight: bicepsLeftTextField.becomeFirstResponder()
         case .bicLeft: hipRightTextField.becomeFirstResponder()
         case .hipRight: hipLeftTextField.becomeFirstResponder()
-        case .hipLeft: view.endEditing(true)
+        case .hipLeft: setDateTextField.becomeFirstResponder()
+        case .setDate: view.endEditing(true)
         }
 
     }
+
+    // SetDateTextField valueChanged
+    @objc private func datePickerValueChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        setDateTextField.text = formatter.string(from: sender.date)
+        dateString = formatter.string(from: sender.date)
+    }
+
 
     // MARK: - Actions
 
@@ -120,8 +145,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
                 return
         }
 
-        guard let name = nameTextField.text,
-            let heightString = heightTextField.text,
+        guard let heightString = heightTextField.text,
             let heightDouble = Double(heightString),
             let weightString = weightTextField.text,
             let weightDouble = Double(weightString),
@@ -145,23 +169,27 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         let ifEmptyHipR = hipRightString == "" ? "0.0" : hipRightString
         let ifEmptyHipL = hipLeftString == "" ? "0.0" : hipLeftString
 
-        let newUser = UserData(date: name, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+        // If setDateTextField is empty put today date in UserData
+        guard let dateWrapped = setDateTextField.text?.isEmpty else {
+            return
+        }
+
+        if dateWrapped == true {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = DateFormatter.Style.medium
+            dateString = dateFormatter.string(from: Date())
+            setDateTextField.text = dateString
+        }
+
+        let newUser = UserData(date: dateString, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
 
         StoredData.shared.data.append(newUser)
 
-        let linkToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
+        let goToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
-        present(linkToMainTabBarController, animated: true)
+        present(goToMainTabBarController, animated: true)
 
         print(newUser.description)
-
-    }
-
-    @IBAction func dateTextField(_ sender: UITextField) {
-        let datePickerView = UIDatePicker()
-        datePickerView.datePickerMode = .date
-        sender.inputView = datePickerView
-//        datePickerView.addTarget(self, action: #selector(InitialDataTableViewController), for: UIControl.Event.valueChanged)
     }
 
     @IBAction func manOrWomanToggle(_ sender: UISegmentedControl) {
@@ -194,9 +222,15 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         } else if textField == hipRightTextField {
             hipLeftTextField.becomeFirstResponder()
         } else if textField == hipLeftTextField {
+            setDateTextField.becomeFirstResponder()
+        } else if textField == setDateTextField {
             view.endEditing(true)
         }
         return true
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 
     // MARK: - Alert message
@@ -215,12 +249,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             self.present(alertContoller, animated: true, completion: nil)
         }
     }
-
-//    func datePickerValueChanged(sender:UIDatePicker) {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateStyle = .medium
-//
-//    }
 }
 
 private enum TypingResultButtonType: String {
@@ -229,5 +257,5 @@ private enum TypingResultButtonType: String {
 }
 
 private enum  TextField: Int {
-    case height = 10, weight, chest, waist, neck, bicRight, bicLeft, hipRight, hipLeft
+    case height = 10, weight, chest, waist, neck, bicRight, bicLeft, hipRight, hipLeft, setDate
 }

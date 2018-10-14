@@ -78,6 +78,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         hipLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipLeft.rawValue)
         setDateTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.setDate.rawValue)
 
+        // DatePicker
         let datepicker = UIDatePicker()
         datepicker.datePickerMode = UIDatePicker.Mode.date
         datepicker.addTarget(self, action: #selector(AddingNewMeasureTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
@@ -86,7 +87,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
     }
 
-    // Tool Bar
+    // ToolBar
     private func makeToolBar(type: TypingResultButtonType, tag: Int) -> UIToolbar {
         let toolbar = UIToolbar()
         let doneButton = UIBarButtonItem(title: type.rawValue, style: .done, target: nil, action: #selector(doneAction))
@@ -115,7 +116,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         }
     }
 
-    // DatePicker
+    // SetDateTextField valueChanged
     @objc private func datePickerValueChanged(sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
@@ -162,6 +163,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
         // If setDateTextField is empty put today date in UserData
         guard let dateWrapped = setDateTextField.text?.isEmpty else { return }
+
         if dateWrapped == true {
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = DateFormatter.Style.medium
@@ -169,7 +171,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
             setDateTextField.text = dateString
         }
 
-        let newUser = UserData(date: dateString, height: 100, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+        let newUser = UserData(date: dateString, height: 180, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
 
         StoredData.shared.data.append(newUser)
 
