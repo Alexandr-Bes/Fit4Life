@@ -83,18 +83,19 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         bicepsLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.bicLeft.rawValue)
         hipRightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipRight.rawValue)
         hipLeftTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.hipLeft.rawValue)
-        setDateTextField.inputAccessoryView = makeToolBar(type: .done, tag: TextField.setDate.rawValue)
+        setDateTextField.inputAccessoryView = dateToolbar
 
-        // DatePicker
+        //  DatePicker
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = UIDatePicker.Mode.date
         datePicker.addTarget(self, action: #selector(InitialDataTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
 
         setDateTextField.inputView = datePicker
+
     }
 
 
-    // ToolBar
+    //  ToolBar for TextFields
     private func makeToolBar(type: TypingResultButtonType, tag: Int) -> UIToolbar {
         let toolbar = UIToolbar()
         let doneButton = UIBarButtonItem(title: type.rawValue, style: .done, target: nil, action:  #selector(doneAction))
@@ -124,7 +125,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     }
 
-    // SetDateTextField valueChanged
+    //  SetDateTextField valueChanged
     @objc private func datePickerValueChanged(sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
@@ -133,15 +134,41 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         dateString = formatter.string(from: sender.date)
     }
 
+    //  Today pressed for setDateTextF
+    @objc private func todayPressed(sender: UIBarButtonItem) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        setDateTextField.text = formatter.string(from: Date())
+        setDateTextField.resignFirstResponder()
+        dateString = formatter.string(from: Date())
+    }
+
+    //  Done pressed for setDateTextF
+    @objc private func donePressed(sender: UIBarButtonItem) {
+        setDateTextField.resignFirstResponder()
+    }
+
+    //  Toolbar for setDateTextF
+    lazy var dateToolbar: UIToolbar = {
+
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
+        toolbar.tintColor = .blue
+
+        let todayButton = UIBarButtonItem(title: "Today", style: .done, target: self, action: #selector(todayPressed(sender:)))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed(sender:)))
+        let flexButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        toolbar.setItems([todayButton, flexButton, doneButton], animated: true)
+
+        return toolbar
+    }()
 
     // MARK: - Actions
 
     @IBAction func saveDataButton(_ sender: Any) {
 
-        if (nameTextField.text?.isEmpty)! ||
-            (heightTextField.text?.isEmpty)! ||
+        if  (heightTextField.text?.isEmpty)! ||
             (weightTextField.text?.isEmpty)! {
-                displayMassage(userMassage: "Sorry, you have to set at least your name, height, and weight")
+                displayMassage(userMassage: "Sorry, you have to set at least your height and weight")
                 return
         }
 
