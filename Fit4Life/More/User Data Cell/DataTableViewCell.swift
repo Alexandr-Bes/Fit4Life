@@ -15,8 +15,6 @@ class DataTableViewCell: UITableViewCell {
 
     // MARK: - Private properties
 
-//    private var datePicker: UIDatePicker?
-
     // MARK: - Lifecycle
 
     override func awakeFromNib() {

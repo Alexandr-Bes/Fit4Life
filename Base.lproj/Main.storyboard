@@ -825,18 +825,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hK-Wd-sN1">
-                                <rect key="frame" x="128" y="326" width="119" height="30"/>
-                                <state key="normal" title="Go to another VC"/>
-                                <connections>
-                                    <action selector="goToAnother:" destination="Xeh-Qg-3bj" eventType="touchUpInside" id="qKZ-dB-RET"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hck-dh-Irt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5hK-Wd-sN1" firstAttribute="centerX" secondItem="sK5-x8-4IS" secondAttribute="centerX" id="HqE-DX-NoE"/>
-                            <constraint firstItem="5hK-Wd-sN1" firstAttribute="centerY" secondItem="sK5-x8-4IS" secondAttribute="centerY" id="cWy-vS-cVd"/>
+                            <constraint firstItem="hck-dh-Irt" firstAttribute="top" secondItem="sK5-x8-4IS" secondAttribute="top" id="7oY-S7-oWy"/>
+                            <constraint firstItem="hck-dh-Irt" firstAttribute="leading" secondItem="sK5-x8-4IS" secondAttribute="leading" id="Cb7-MC-N0q"/>
+                            <constraint firstItem="hck-dh-Irt" firstAttribute="trailing" secondItem="sK5-x8-4IS" secondAttribute="trailing" id="IdF-yY-TrY"/>
+                            <constraint firstItem="sK5-x8-4IS" firstAttribute="bottom" secondItem="hck-dh-Irt" secondAttribute="bottom" id="cYK-yb-oZS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sK5-x8-4IS"/>
                     </view>

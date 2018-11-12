@@ -32,11 +32,9 @@ class ExercisesViewController: UIViewController {
 
     }
 
-    @IBAction func goToAnother(_ sender: Any) {
 
-        let goToVC = UIStoryboard(name: Constants.exStoryboard, bundle: nil).instantiateViewController(withIdentifier: Constants.exVC)
-
-        navigationController?.pushViewController(goToVC, animated: true)
-    }
+//        let goToVC = UIStoryboard(name: Constants.exStoryboard, bundle: nil).instantiateViewController(withIdentifier: Constants.exVC)
+//
+//        navigationController?.pushViewController(goToVC, animated: true)
 
 }

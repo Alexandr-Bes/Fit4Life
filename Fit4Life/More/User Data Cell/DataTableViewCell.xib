@@ -44,7 +44,7 @@
                 <outlet property="dateOfMeasurement" destination="pBI-sS-1yT" id="aw7-Is-ydh"/>
                 <outlet property="weightLabel" destination="Cnh-GH-SVK" id="b0U-jf-gr7"/>
             </connections>
-            <point key="canvasLocation" x="65.5" y="30"/>
+            <point key="canvasLocation" x="64.799999999999997" y="29.685157421289357"/>
         </tableViewCell>
     </objects>
 </document>
