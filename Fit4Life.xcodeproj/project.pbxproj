@@ -17,12 +17,8 @@
 		FA43317F213DDD2F00378004 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43317E213DDD2F00378004 /* ExercisesViewController.swift */; };
 		FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433180213DDE2700378004 /* WorkoutsViewController.swift */; };
 		FA433183213DE2E300378004 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433182213DE2E300378004 /* LogsViewController.swift */; };
-		FA5DAF4621754B11001159F7 /* MuscleGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DAF4421754B11001159F7 /* MuscleGroupCell.swift */; };
-		FA5DAF4721754B11001159F7 /* MuscleGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DAF4521754B11001159F7 /* MuscleGroupCell.xib */; };
-		FA5DAF4B21754EDA001159F7 /* MuscleGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DAF4A21754EDA001159F7 /* MuscleGroups.swift */; };
-		FA6338652157FC87001CD42E /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6338642157FC87001CD42E /* Exercises.storyboard */; };
-		FA6338682157FDC2001CD42E /* SomeNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6338662157FDC2001CD42E /* SomeNewViewController.swift */; };
 		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
+		FA9FABA8225D2D5F0089804D /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9FABA7225D2D5F0089804D /* Exercises.storyboard */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
 		FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */; };
@@ -41,12 +37,8 @@
 		FA43317E213DDD2F00378004 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		FA433180213DDE2700378004 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		FA433182213DE2E300378004 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
-		FA5DAF4421754B11001159F7 /* MuscleGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupCell.swift; sourceTree = "<group>"; };
-		FA5DAF4521754B11001159F7 /* MuscleGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MuscleGroupCell.xib; sourceTree = "<group>"; };
-		FA5DAF4A21754EDA001159F7 /* MuscleGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroups.swift; sourceTree = "<group>"; };
-		FA6338642157FC87001CD42E /* Exercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exercises.storyboard; sourceTree = "<group>"; };
-		FA6338662157FDC2001CD42E /* SomeNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeNewViewController.swift; sourceTree = "<group>"; };
 		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FA9FABA7225D2D5F0089804D /* Exercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exercises.storyboard; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC91D3220CD890000E301B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC91D3720CD890000E301B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,12 +59,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA1BFB9620FAA39E003C1324 /* Initial Data */ = {
+		FA1BFB9620FAA39E003C1324 /* Initial Entry */ = {
 			isa = PBXGroup;
 			children = (
 				FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */,
 			);
-			path = "Initial Data";
+			path = "Initial Entry";
 			sourceTree = "<group>";
 		};
 		FA1BFB9920FAA89A003C1324 /* User Data Model */ = {
@@ -86,19 +78,10 @@
 		FA2D4C3D2107F8E700FF2A9A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FA1BFB9920FAA89A003C1324 /* User Data Model */,
 				FA2D4C3E2107F92600FF2A9A /* StoredData.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		FA2D4C41210A54B100FF2A9A /* More */ = {
-			isa = PBXGroup;
-			children = (
-				FA2D4C42210A550300FF2A9A /* UserDataViewController.swift */,
-				FA2D4C4421139BD700FF2A9A /* User Data Cell */,
-				FA2D4C4A2117567900FF2A9A /* Adding New Measure */,
-			);
-			path = More;
 			sourceTree = "<group>";
 		};
 		FA2D4C4421139BD700FF2A9A /* User Data Cell */ = {
@@ -126,54 +109,15 @@
 			path = "Main Tab Bar";
 			sourceTree = "<group>";
 		};
-		FA43317B213DDC9500378004 /* Logs */ = {
-			isa = PBXGroup;
-			children = (
-				FA433182213DE2E300378004 /* LogsViewController.swift */,
-			);
-			path = Logs;
-			sourceTree = "<group>";
-		};
-		FA43317C213DDCB200378004 /* Exercises */ = {
-			isa = PBXGroup;
-			children = (
-				FA5DAF4821754E6D001159F7 /* Muscle Groups */,
-				FA43317E213DDD2F00378004 /* ExercisesViewController.swift */,
-				FA6338642157FC87001CD42E /* Exercises.storyboard */,
-				FA6338662157FDC2001CD42E /* SomeNewViewController.swift */,
-				FA5DAF4321754A90001159F7 /* Exercises Cell */,
-			);
-			path = Exercises;
-			sourceTree = "<group>";
-		};
-		FA43317D213DDCD100378004 /* Workouts */ = {
-			isa = PBXGroup;
-			children = (
-				FA433180213DDE2700378004 /* WorkoutsViewController.swift */,
-			);
-			path = Workouts;
-			sourceTree = "<group>";
-		};
-		FA5DAF4321754A90001159F7 /* Exercises Cell */ = {
-			isa = PBXGroup;
-			children = (
-				FA5DAF4421754B11001159F7 /* MuscleGroupCell.swift */,
-				FA5DAF4521754B11001159F7 /* MuscleGroupCell.xib */,
-			);
-			path = "Exercises Cell";
-			sourceTree = "<group>";
-		};
-		FA5DAF4821754E6D001159F7 /* Muscle Groups */ = {
-			isa = PBXGroup;
-			children = (
-				FA5DAF4A21754EDA001159F7 /* MuscleGroups.swift */,
-			);
-			path = "Muscle Groups";
-			sourceTree = "<group>";
-		};
 		FA9FABA2225D24680089804D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA1BFB9620FAA39E003C1324 /* Initial Entry */,
+				FA43317E213DDD2F00378004 /* ExercisesViewController.swift */,
+				FA433180213DDE2700378004 /* WorkoutsViewController.swift */,
+				FA433182213DE2E300378004 /* LogsViewController.swift */,
+				FA2D4C42210A550300FF2A9A /* UserDataViewController.swift */,
+				FA2D4C4A2117567900FF2A9A /* Adding New Measure */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,20 +125,46 @@
 		FA9FABA3225D24790089804D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA2D4C3D2107F8E700FF2A9A /* Data */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA9FABA4225D27A30089804D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAC91D3620CD890000E301B2 /* Main.storyboard */,
+				FA9FABA7225D2D5F0089804D /* Exercises.storyboard */,
+				FA43317A213DDC6000378004 /* Main Tab Bar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9FABA5225D28C60089804D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAC91D4120CD890100E301B2 /* Info.plist */,
+				FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA9FABA6225D295F0089804D /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA2D4C4421139BD700FF2A9A /* User Data Cell */,
+			);
+			path = "TableView Cells";
 			sourceTree = "<group>";
 		};
 		FAC91D2620CD890000E301B2 = {
 			isa = PBXGroup;
 			children = (
 				FAC91D3120CD890000E301B2 /* Fit4Life */,
-				FAC91D3620CD890000E301B2 /* Main.storyboard */,
 				FAC91D3C20CD890100E301B2 /* Assets.xcassets */,
+				FA9FABA5225D28C60089804D /* Supporting Files */,
 				FAC91D3220CD890000E301B2 /* AppDelegate.swift */,
 				FAC91D3E20CD890100E301B2 /* LaunchScreen.storyboard */,
-				FAC91D4120CD890100E301B2 /* Info.plist */,
-				FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */,
 				FAC91D3020CD890000E301B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -210,16 +180,10 @@
 		FAC91D3120CD890000E301B2 /* Fit4Life */ = {
 			isa = PBXGroup;
 			children = (
+				FA9FABA4225D27A30089804D /* View */,
 				FA9FABA3225D24790089804D /* Model */,
 				FA9FABA2225D24680089804D /* Controllers */,
-				FA1BFB9620FAA39E003C1324 /* Initial Data */,
-				FA43317A213DDC6000378004 /* Main Tab Bar */,
-				FA43317C213DDCB200378004 /* Exercises */,
-				FA43317D213DDCD100378004 /* Workouts */,
-				FA43317B213DDC9500378004 /* Logs */,
-				FA2D4C41210A54B100FF2A9A /* More */,
-				FA1BFB9920FAA89A003C1324 /* User Data Model */,
-				FA2D4C3D2107F8E700FF2A9A /* Data */,
+				FA9FABA6225D295F0089804D /* TableView Cells */,
 			);
 			path = Fit4Life;
 			sourceTree = "<group>";
@@ -283,12 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5DAF4721754B11001159F7 /* MuscleGroupCell.xib in Resources */,
 				FAC91D4020CD890100E301B2 /* LaunchScreen.storyboard in Resources */,
 				FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */,
 				FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */,
 				FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */,
-				FA6338652157FC87001CD42E /* Exercises.storyboard in Resources */,
+				FA9FABA8225D2D5F0089804D /* Exercises.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6338682157FDC2001CD42E /* SomeNewViewController.swift in Sources */,
 				FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */,
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
@@ -309,8 +271,6 @@
 				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
 				FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */,
 				FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */,
-				FA5DAF4B21754EDA001159F7 /* MuscleGroups.swift in Sources */,
-				FA5DAF4621754B11001159F7 /* MuscleGroupCell.swift in Sources */,
 				FA2D4C472113AC2D00FF2A9A /* DataTableViewCell.swift in Sources */,
 				FA2D4C4C2117570200FF2A9A /* AddingNewMeasureTableViewController.swift in Sources */,
 				FA433183213DE2E300378004 /* LogsViewController.swift in Sources */,
@@ -459,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 663DYMD95T;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 663DYMD95T;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

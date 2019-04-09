@@ -21,6 +21,7 @@ class LogsViewController: UIViewController {
 
     private func setupUI() {
 
+        title = "Logs"
     }
 
 }
