@@ -10,10 +10,10 @@ import UIKit
 
 class UserDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: - Outlets
     @IBOutlet weak var userDataTableView: UITableView!
 
-    // MARK: - Private properties
-
+    // MARK: - Private Properties
     private struct Constants {
         static let mainStoryBoardName = "Main"
         static let tabBarViewController = "MainTabBarController"
@@ -22,8 +22,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
 
-    // MARK: Lifecycle
-
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -33,18 +32,15 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
 
         let user = StoredData.shared.data
-
         var userWeight = [Double]()
         for weight in user {
             userWeight.append(weight.weight ?? 0.0)
         }
         print(userWeight)
-
         userDataTableView.reloadData()
     }
 
-    // MARK: - Private properties
-
+    // MARK: - Private Methods
     private func setupUI() {
 
         userDataTableView.delegate = self
@@ -61,7 +57,6 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     // MARK: - Actions
-
     @IBAction func addNewMeasure(_ sender: Any) {
 
         let linkToAddingNewMeasureTableViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: "AddingNewMeasureNavigationController")
@@ -69,8 +64,7 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         present(linkToAddingNewMeasureTableViewController, animated: true)
     }
 
-    // MARK: - UI Table View Delegate and Data Source
-
+    // MARK: - UI Table View Delegate and Data Source Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return StoredData.shared.data.count
     }
@@ -78,7 +72,6 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.dataTableViewCellId, for: indexPath) as! DataTableViewCell
-
         let measurement = StoredData.shared.data[indexPath.row]
         cell.configure(data: measurement)
         return cell
@@ -87,4 +80,5 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 49.5
     }
+    
 }

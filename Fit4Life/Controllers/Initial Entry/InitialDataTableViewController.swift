@@ -10,7 +10,7 @@ import UIKit
 
 class InitialDataTableViewController: UITableViewController, UITextFieldDelegate {
 
-
+    // MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
@@ -24,7 +24,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     @IBOutlet weak var setDateTextField: UITextField!
 
 
-    // MARK: - Private properties
+    // MARK: - Private Properties
 
     private struct Constants {
         static let mainStoryBoardName = "Main"
@@ -33,16 +33,14 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     private var dateString = String()
 
-    // MARK: - Lifecycle
+    // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
-
     // MARK: - Private Methods
-
     private func setupUI() {
 
         // Keyboard for text fields
@@ -91,7 +89,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         datePicker.addTarget(self, action: #selector(InitialDataTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
 
         setDateTextField.inputView = datePicker
-
     }
 
 
@@ -122,7 +119,6 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         case .hipLeft: setDateTextField.becomeFirstResponder()
         case .setDate: view.endEditing(true)
         }
-
     }
 
     //  SetDateTextField valueChanged
@@ -134,7 +130,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         dateString = formatter.string(from: sender.date)
     }
 
-    //  Today pressed for setDateTextF
+    //  Today pressed for setDateTextField
     @objc private func todayPressed(sender: UIBarButtonItem) {
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
@@ -143,7 +139,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         dateString = formatter.string(from: Date())
     }
 
-    //  Done pressed for setDateTextF
+    //  Done pressed for setDateTextField
     @objc private func donePressed(sender: UIBarButtonItem) {
         setDateTextField.resignFirstResponder()
     }
@@ -163,12 +159,11 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }()
 
     // MARK: - Actions
-
     @IBAction func saveDataButton(_ sender: Any) {
 
         if  (heightTextField.text?.isEmpty)! ||
             (weightTextField.text?.isEmpty)! {
-                displayMassage(userMassage: "Sorry, you have to set at least your height and weight")
+                showDefaultAlert(title: "Oops", message: "Sorry, you have to set at least your height and weight")
                 return
         }
 
@@ -215,22 +210,18 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         let goToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
         present(goToMainTabBarController, animated: true)
-
         print(newUser.description)
     }
 
     @IBAction func manOrWomanToggle(_ sender: UISegmentedControl) {
-
         if sender.selectedSegmentIndex == 0 {
             print("Man")
-
         } else {
             print("Woman")
         }
     }
 
     // MARK: - UI Text Field Delegate methods
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
             heightTextField.becomeFirstResponder()
@@ -260,22 +251,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         return 40
     }
 
-    // MARK: - Alert message
-    
-    func displayMassage(userMassage:String) -> Void {
-        DispatchQueue.main.async {
-            let alertContoller = UIAlertController(title: "Error", message: userMassage, preferredStyle: .alert)
 
-            let OkAction = UIAlertAction(title: "OK", style: .destructive) {
-                (action:UIAlertAction!) in
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            alertContoller.addAction(OkAction)
-            self.present(alertContoller, animated: true, completion: nil)
-        }
-    }
 }
 
 private enum TypingResultButtonType: String {

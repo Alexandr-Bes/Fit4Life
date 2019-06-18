@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA03A75B22B97A74008EA1EF /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75922B97A73008EA1EF /* Workouts.storyboard */; };
+		FA03A75D22B97B07008EA1EF /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75C22B97B07008EA1EF /* Logs.storyboard */; };
+		FA03A76022B97B7D008EA1EF /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75E22B97B7D008EA1EF /* Exercises.storyboard */; };
+		FA03A76222B982CA008EA1EF /* MyParameters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A76122B982CA008EA1EF /* MyParameters.storyboard */; };
+		FA03A76522B98FDC008EA1EF /* ViewController+DisplayAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */; };
 		FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */; };
 		FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */; };
 		FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C3E2107F92600FF2A9A /* StoredData.swift */; };
@@ -18,7 +23,7 @@
 		FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433180213DDE2700378004 /* WorkoutsViewController.swift */; };
 		FA433183213DE2E300378004 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433182213DE2E300378004 /* LogsViewController.swift */; };
 		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
-		FA9FABA8225D2D5F0089804D /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9FABA7225D2D5F0089804D /* Exercises.storyboard */; };
+		FA9FABA8225D2D5F0089804D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9FABA7225D2D5F0089804D /* Settings.storyboard */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
 		FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */; };
@@ -27,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA03A75A22B97A73008EA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fit4Life/View/Base.lproj/Workouts.storyboard; sourceTree = "<group>"; };
+		FA03A75C22B97B07008EA1EF /* Logs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logs.storyboard; sourceTree = "<group>"; };
+		FA03A75F22B97B7D008EA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fit4Life/View/Base.lproj/Exercises.storyboard; sourceTree = "<group>"; };
+		FA03A76122B982CA008EA1EF /* MyParameters.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyParameters.storyboard; sourceTree = "<group>"; };
+		FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DisplayAlert.swift"; sourceTree = "<group>"; };
 		FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDataTableViewController.swift; sourceTree = "<group>"; };
 		FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FA2D4C3E2107F92600FF2A9A /* StoredData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredData.swift; sourceTree = "<group>"; };
@@ -38,7 +48,7 @@
 		FA433180213DDE2700378004 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		FA433182213DE2E300378004 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		FA9FABA7225D2D5F0089804D /* Exercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exercises.storyboard; sourceTree = "<group>"; };
+		FA9FABA7225D2D5F0089804D /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC91D3220CD890000E301B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC91D3720CD890000E301B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA03A76322B98633008EA1EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FA1BFB9620FAA39E003C1324 /* Initial Entry */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +130,7 @@
 		FA9FABA2225D24680089804D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA43317A213DDC6000378004 /* Main Tab Bar */,
 				FA1BFB9620FAA39E003C1324 /* Initial Entry */,
 				FA43317E213DDD2F00378004 /* ExercisesViewController.swift */,
 				FA433180213DDE2700378004 /* WorkoutsViewController.swift */,
@@ -134,8 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				FAC91D3620CD890000E301B2 /* Main.storyboard */,
-				FA9FABA7225D2D5F0089804D /* Exercises.storyboard */,
-				FA43317A213DDC6000378004 /* Main Tab Bar */,
+				FA03A75E22B97B7D008EA1EF /* Exercises.storyboard */,
+				FA03A75922B97A73008EA1EF /* Workouts.storyboard */,
+				FA03A75C22B97B07008EA1EF /* Logs.storyboard */,
+				FA03A76122B982CA008EA1EF /* MyParameters.storyboard */,
+				FA9FABA7225D2D5F0089804D /* Settings.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,9 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				FA9FABA4225D27A30089804D /* View */,
-				FA9FABA3225D24790089804D /* Model */,
 				FA9FABA2225D24680089804D /* Controllers */,
 				FA9FABA6225D295F0089804D /* TableView Cells */,
+				FA03A76322B98633008EA1EF /* Extensions */,
+				FA9FABA3225D24790089804D /* Model */,
 			);
 			path = Fit4Life;
 			sourceTree = "<group>";
@@ -250,8 +273,12 @@
 				FAC91D4020CD890100E301B2 /* LaunchScreen.storyboard in Resources */,
 				FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */,
 				FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */,
+				FA03A76222B982CA008EA1EF /* MyParameters.storyboard in Resources */,
 				FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */,
-				FA9FABA8225D2D5F0089804D /* Exercises.storyboard in Resources */,
+				FA03A75B22B97A74008EA1EF /* Workouts.storyboard in Resources */,
+				FA03A75D22B97B07008EA1EF /* Logs.storyboard in Resources */,
+				FA03A76022B97B7D008EA1EF /* Exercises.storyboard in Resources */,
+				FA9FABA8225D2D5F0089804D /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +293,7 @@
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
 				FA2D4C43210A550300FF2A9A /* UserDataViewController.swift in Sources */,
+				FA03A76522B98FDC008EA1EF /* ViewController+DisplayAlert.swift in Sources */,
 				FA43317F213DDD2F00378004 /* ExercisesViewController.swift in Sources */,
 				FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */,
 				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
@@ -280,6 +308,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FA03A75922B97A73008EA1EF /* Workouts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA03A75A22B97A73008EA1EF /* Base */,
+			);
+			name = Workouts.storyboard;
+			sourceTree = "<group>";
+		};
+		FA03A75E22B97B7D008EA1EF /* Exercises.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA03A75F22B97B7D008EA1EF /* Base */,
+			);
+			name = Exercises.storyboard;
+			sourceTree = "<group>";
+		};
 		FAC91D3620CD890000E301B2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

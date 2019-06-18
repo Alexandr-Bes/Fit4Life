@@ -10,7 +10,7 @@ import UIKit
 
 class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDelegate {
 
-
+    // MARK: - Outlets
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var chestTextField: UITextField!
     @IBOutlet weak var waistTextField: UITextField!
@@ -22,8 +22,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak var setDateTextField: UITextField!
 
 
-    // MARK: - Private properties
-
+    // MARK: - Private Properties
     private struct Constants {
         static let mainStoryBoardName = "Main"
         static let userDataViewController = "UserDataViewController"
@@ -32,15 +31,13 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
       private  var dateString = String()
 
-    // MARK: Lifecycle
-
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
     // MARK: - Private Methods
-
     private func setupUI() {
 
         // Keyboard for text fields
@@ -82,7 +79,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         let datepicker = UIDatePicker()
         datepicker.datePickerMode = UIDatePicker.Mode.date
         datepicker.addTarget(self, action: #selector(AddingNewMeasureTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
-
         setDateTextField.inputView = datepicker
 
     }
@@ -153,7 +149,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
     }()
 
     // MARK: - Actions
-
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
@@ -161,7 +156,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
     @IBAction func saveNewMeasureButton(_ sender: Any) {
 
         if (weightTextField.text?.isEmpty)! {
-            displayMassage(userMassage: "Sorry, you have to type at least your weight")
+            showDefaultAlert(title: "Oops", message: "Sorry, you have to type at least your weight")
             return
         }
 
@@ -174,10 +169,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
             let bicLeftString = bicLeftTextField.text,
             let hipRightString = hipRightTextField.text,
             let hipLeftString = hipLeftTextField.text
-
-            else {
-                return
-        }
+            else { return }
 
         let ifEmptyChest = chestString == "" ? "0.0" : chestString
         let ifEmptyWaist = waistString == "" ? "0.0" : waistString
@@ -205,13 +197,11 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         let goToUserDataViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
         present(goToUserDataViewController, animated: true)
-
         print(newUser.description)
     }
 
 
-    // MARK: - UI Text Field Delegate methods
-
+    // MARK: - UI Text Field Delegate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == weightTextField {
             chestTextField.becomeFirstResponder()
@@ -239,21 +229,7 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         return 40
     }
 
-    // MARK: - Alert message
-    func displayMassage(userMassage: String) -> Void {
-        DispatchQueue.main.async {
-            let alertContoller = UIAlertController(title: "Error", message: userMassage, preferredStyle: .alert)
 
-            let OkAction = UIAlertAction(title: "OK", style: .destructive) {
-                (action: UIAlertAction!) in
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            alertContoller.addAction(OkAction)
-            self.present(alertContoller, animated: true, completion: nil)
-        }
-    }
 }
 
 private enum TypingResultButtonType: String {

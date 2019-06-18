@@ -10,18 +10,15 @@ import UIKit
 
 class LogsViewController: UIViewController {
 
-    // MARK: - Lifecycle
-
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
     // MARK: - Private Methods
-
     private func setupUI() {
-
-        title = "Logs"
+        self.title = "Logs"
     }
 
 }

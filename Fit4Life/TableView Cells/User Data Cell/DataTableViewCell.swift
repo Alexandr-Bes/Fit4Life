@@ -13,26 +13,21 @@ class DataTableViewCell: UITableViewCell {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var dateOfMeasurement: UILabel!
 
-    // MARK: - Private properties
+    // MARK: - Private Properties
 
-    // MARK: - Lifecycle
-
+    // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-
         setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
-    // MARK: - Private methods
-
+    // MARK: - Private Methods
     private func setupUI() {
         weightLabel.font = UIFont.boldSystemFont(ofSize: 18)
-
     }
 
     func configure(data: UserData) {
