@@ -12,6 +12,9 @@
 		FA03A76022B97B7D008EA1EF /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75E22B97B7D008EA1EF /* Exercises.storyboard */; };
 		FA03A76222B982CA008EA1EF /* MyParameters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A76122B982CA008EA1EF /* MyParameters.storyboard */; };
 		FA03A76522B98FDC008EA1EF /* ViewController+DisplayAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */; };
+		FA03A76A22BA3FB0008EA1EF /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03A76822BA3FB0008EA1EF /* WorkoutCell.swift */; };
+		FA03A76B22BA3FB0008EA1EF /* WorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA03A76922BA3FB0008EA1EF /* WorkoutCell.xib */; };
+		FA03A76D22BA41DC008EA1EF /* TableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03A76C22BA41DC008EA1EF /* TableViewCell+Identifier.swift */; };
 		FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */; };
 		FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */; };
 		FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D4C3E2107F92600FF2A9A /* StoredData.swift */; };
@@ -37,6 +40,9 @@
 		FA03A75F22B97B7D008EA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fit4Life/View/Base.lproj/Exercises.storyboard; sourceTree = "<group>"; };
 		FA03A76122B982CA008EA1EF /* MyParameters.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyParameters.storyboard; sourceTree = "<group>"; };
 		FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DisplayAlert.swift"; sourceTree = "<group>"; };
+		FA03A76822BA3FB0008EA1EF /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		FA03A76922BA3FB0008EA1EF /* WorkoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutCell.xib; sourceTree = "<group>"; };
+		FA03A76C22BA41DC008EA1EF /* TableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDataTableViewController.swift; sourceTree = "<group>"; };
 		FA1BFB9B20FAB391003C1324 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FA2D4C3E2107F92600FF2A9A /* StoredData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredData.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */,
+				FA03A76C22BA41DC008EA1EF /* TableViewCell+Identifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				FA2D4C4421139BD700FF2A9A /* User Data Cell */,
+				FA03A76822BA3FB0008EA1EF /* WorkoutCell.swift */,
+				FA03A76922BA3FB0008EA1EF /* WorkoutCell.xib */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */,
 				FA03A75B22B97A74008EA1EF /* Workouts.storyboard in Resources */,
 				FA03A75D22B97B07008EA1EF /* Logs.storyboard in Resources */,
+				FA03A76B22BA3FB0008EA1EF /* WorkoutCell.xib in Resources */,
 				FA03A76022B97B7D008EA1EF /* Exercises.storyboard in Resources */,
 				FA9FABA8225D2D5F0089804D /* Settings.storyboard in Resources */,
 			);
@@ -296,8 +306,10 @@
 				FA03A76522B98FDC008EA1EF /* ViewController+DisplayAlert.swift in Sources */,
 				FA43317F213DDD2F00378004 /* ExercisesViewController.swift in Sources */,
 				FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */,
+				FA03A76D22BA41DC008EA1EF /* TableViewCell+Identifier.swift in Sources */,
 				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
 				FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */,
+				FA03A76A22BA3FB0008EA1EF /* WorkoutCell.swift in Sources */,
 				FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */,
 				FA2D4C472113AC2D00FF2A9A /* DataTableViewCell.swift in Sources */,
 				FA2D4C4C2117570200FF2A9A /* AddingNewMeasureTableViewController.swift in Sources */,
