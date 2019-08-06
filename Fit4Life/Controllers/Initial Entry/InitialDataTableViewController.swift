@@ -32,6 +32,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 
     private var dateString = String()
+    private var gender = String()
 
     // MARK: - Lifecycle Methods
 
@@ -89,6 +90,11 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         datePicker.addTarget(self, action: #selector(InitialDataTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
 
         setDateTextField.inputView = datePicker
+
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        dateString = formatter.string(from: Date())
+        setDateTextField.text = dateString
     }
 
 
@@ -126,17 +132,17 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
         formatter.timeStyle = DateFormatter.Style.none
-        setDateTextField.text = formatter.string(from: sender.date)
         dateString = formatter.string(from: sender.date)
+        setDateTextField.text = dateString
     }
 
     //  Today pressed for setDateTextField
     @objc private func todayPressed(sender: UIBarButtonItem) {
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
-        setDateTextField.text = formatter.string(from: Date())
-        setDateTextField.resignFirstResponder()
         dateString = formatter.string(from: Date())
+        setDateTextField.text = dateString
+        setDateTextField.resignFirstResponder()
     }
 
     //  Done pressed for setDateTextField
@@ -163,14 +169,12 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
         if  (heightTextField.text?.isEmpty)! ||
             (weightTextField.text?.isEmpty)! {
-                showDefaultAlert(title: "Oops", message: "Sorry, you have to set at least your height and weight")
-                return
+            showDefaultAlert(title: "Oops", message: "Sorry, you have to set at least your height and weight")
+            return
         }
 
         guard let heightString = heightTextField.text,
-            let heightDouble = Double(heightString),
             let weightString = weightTextField.text,
-            let weightDouble = Double(weightString),
             let chestString = chestTextField.text,
             let waistString = waistTextField.text,
             let neckString = neckTextField.text,
@@ -178,18 +182,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             let bicLeftString = bicepsLeftTextField.text,
             let hipRightString = hipRightTextField.text,
             let hipLeftString = hipLeftTextField.text
-
         else {
             return
         }
-
-        let ifEmptyChest = chestString == "" ? "0.0" : chestString
-        let ifEmptyWaist = waistString == "" ? "0.0" : waistString
-        let ifEmptyNeck = neckString == "" ? "0.0" : neckString
-        let ifEmptyBicR = bicRightString == "" ? "0.0" : bicRightString
-        let ifEmptyBicL = bicLeftString == "" ? "0.0" : bicLeftString
-        let ifEmptyHipR = hipRightString == "" ? "0.0" : hipRightString
-        let ifEmptyHipL = hipLeftString == "" ? "0.0" : hipLeftString
 
         // If setDateTextField is empty put today date in UserData
         guard let dateWrapped = setDateTextField.text?.isEmpty else {
@@ -203,7 +198,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             setDateTextField.text = dateString
         }
 
-        let newUser = UserData(date: dateString, height: heightDouble, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+        let newUser = UserData(date: dateString, height: heightString, weight: weightString, chest: chestString, waist: waistString, neck: neckString, bicRight: bicRightString, bicLeft: bicLeftString, hipRight: hipRightString, hipLeft: hipLeftString, gender: gender)
 
         StoredData.shared.data.append(newUser)
 
@@ -215,9 +210,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     @IBAction func manOrWomanToggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            print("Man")
+            gender = "Man"
         } else {
-            print("Woman")
+            gender = "Woman"
         }
     }
 

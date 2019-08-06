@@ -29,7 +29,8 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         static let tabBarViewController = "MainTabBarController"
     }
 
-      private  var dateString = String()
+    private var dateString = String()
+    private var gender = String()
 
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
@@ -79,7 +80,12 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         let datepicker = UIDatePicker()
         datepicker.datePickerMode = UIDatePicker.Mode.date
         datepicker.addTarget(self, action: #selector(AddingNewMeasureTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+
         setDateTextField.inputView = datepicker
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        dateString = formatter.string(from: Date())
+        setDateTextField.text = dateString
 
     }
 
@@ -117,17 +123,17 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
         formatter.timeStyle = DateFormatter.Style.none
-        setDateTextField.text = formatter.string(from: sender.date)
         dateString = formatter.string(from: sender.date)
+        setDateTextField.text = dateString
     }
 
     //  Today pressed for setDateTextF
     @objc private func todayPressed(sender: UIBarButtonItem) {
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
-        setDateTextField.text = formatter.string(from: Date())
-        setDateTextField.resignFirstResponder()
         dateString = formatter.string(from: Date())
+        setDateTextField.text = dateString
+        setDateTextField.resignFirstResponder()
     }
 
     //  Done pressed for setDateTextF
@@ -161,7 +167,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         }
 
         guard let weightString =  weightTextField.text,
-            let weightDouble = Double(weightString),
             let chestString = chestTextField.text,
             let waistString = waistTextField.text,
             let neckString = neckTextField.text,
@@ -169,15 +174,9 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
             let bicLeftString = bicLeftTextField.text,
             let hipRightString = hipRightTextField.text,
             let hipLeftString = hipLeftTextField.text
-            else { return }
-
-        let ifEmptyChest = chestString == "" ? "0.0" : chestString
-        let ifEmptyWaist = waistString == "" ? "0.0" : waistString
-        let ifEmptyNeck = neckString == "" ? "0.0" : neckString
-        let ifEmptyBicR = bicRightString == "" ? "0.0" : bicRightString
-        let ifEmptyBicL = bicLeftString == "" ? "0.0" : bicLeftString
-        let ifEmptyHipR = hipRightString == "" ? "0.0" : hipRightString
-        let ifEmptyHipL = hipLeftString == "" ? "0.0" : hipLeftString
+            else {
+                return
+        }
 
 
         // If setDateTextField is empty put today date in UserData
@@ -190,10 +189,11 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
             setDateTextField.text = dateString
         }
 
-        let newUser = UserData(date: dateString, height: 180, weight: weightDouble, chest: Double(ifEmptyChest), waist: Double(ifEmptyWaist), neck: Double(ifEmptyNeck), bicRight: Double(ifEmptyBicR), bicLeft: Double(ifEmptyBicL), hipRight: Double(ifEmptyHipR), hipLeft: Double(ifEmptyHipL), manWoman: true)
+        // TODO: height have to be static
+
+        let newUser = UserData(date: dateString, height: "180", weight: weightString, chest: chestString, waist: waistString, neck: neckString, bicRight: bicRightString, bicLeft: bicLeftString, hipRight: hipRightString, hipLeft: hipLeftString, gender: gender)
 
         StoredData.shared.data.append(newUser)
-
         let goToUserDataViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
         present(goToUserDataViewController, animated: true)

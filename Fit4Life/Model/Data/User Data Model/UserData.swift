@@ -10,29 +10,29 @@ import Foundation
 
 class UserData {
 
-    var date: String?
-    var height: Double?
-    var weight: Double?
-    var chest: Double?
-    var waist: Double?
-    var neck: Double?
-    var bicRight: Double?
-    var bicLeft: Double?
-    var hipRight: Double?
-    var hipLeft: Double?
-    var manWoman: Bool
+    var date: String
+    var height: String
+    var weight: String
+    var chest: String
+    var waist: String
+    var neck: String
+    var bicRight: String
+    var bicLeft: String
+    var hipRight: String
+    var hipLeft: String
+    var gender: String
 
     init(date: String,
-         height: Double,
-         weight: Double,
-         chest: Double?,
-         waist: Double?,
-         neck: Double?,
-         bicRight: Double?,
-         bicLeft: Double?,
-         hipRight: Double?,
-         hipLeft: Double?,
-         manWoman: Bool) {
+         height: String,
+         weight: String,
+         chest: String,
+         waist: String,
+         neck: String,
+         bicRight: String,
+         bicLeft: String,
+         hipRight: String,
+         hipLeft: String,
+         gender: String) {
 
         self.date = date
         self.height = height
@@ -44,10 +44,24 @@ class UserData {
         self.bicLeft = bicLeft
         self.hipRight = hipRight
         self.hipLeft = hipLeft
-        self.manWoman = manWoman
+        self.gender = gender
+    }
+
+    convenience init() {
+        self.init(date: "Not set",
+                  height: "Not set",
+                  weight: "Not set",
+                  chest: "Not set",
+                  waist: "Not set",
+                  neck: "Not set",
+                  bicRight: "Not set",
+                  bicLeft: "Not set",
+                  hipRight: "Not set",
+                  hipLeft: "Not set",
+                  gender: "Not set")
     }
 
     var description: String {
-        return "date: \(date ?? "No set"); height: \(height ?? 0.0); weight: \(weight ?? 0.0); chest: \(chest ?? 0.0); waist: \(waist ?? 0.0); neck: \(neck ?? 0.0); bicRight: \(bicRight ?? 0.0); bicLeft: \(bicLeft ?? 0.0); hipRight: \(hipRight ?? 0.0); hipLeft: \(hipLeft ?? 0.0); manWoman: \(manWoman)"
+        return "date: \(date); height: \(height); weight: \(weight); chest: \(chest); waist: \(waist); neck: \(neck); bicRight: \(bicRight); bicLeft: \(bicLeft); hipRight: \(hipRight); hipLeft: \(hipLeft); manWoman: \(gender)"
     }
 }

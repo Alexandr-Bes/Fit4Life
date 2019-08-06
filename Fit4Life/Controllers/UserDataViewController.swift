@@ -32,9 +32,9 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
 
         let user = StoredData.shared.data
-        var userWeight = [Double]()
+        var userWeight = [String]()
         for weight in user {
-            userWeight.append(weight.weight ?? 0.0)
+            userWeight.append(weight.weight)
         }
         print(userWeight)
         userDataTableView.reloadData()

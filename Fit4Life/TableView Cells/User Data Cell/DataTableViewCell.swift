@@ -31,7 +31,11 @@ class DataTableViewCell: UITableViewCell {
     }
 
     func configure(data: UserData) {
-            weightLabel.text = "\(data.weight ?? 0.0)kg"
-            dateOfMeasurement.text = "\(data.date ?? "Not set")"
+        if data.weight == "Not set" {
+             weightLabel.text = "Not set"
+        } else {
+            weightLabel.text = "\(data.weight)kg"
+        }
+        dateOfMeasurement.text = "\(data.date)"
     }
 }
