@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDelegate {
+class AddingNewMeasureTableViewController: UITableViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var weightTextField: UITextField!
@@ -23,16 +23,10 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
 
 
     // MARK: - Private Properties
-    private struct Constants {
-        static let mainStoryBoardName = "Main"
-        static let userDataViewController = "UserDataViewController"
-        static let tabBarViewController = "MainTabBarController"
-    }
-
     private var dateString = String()
     private var gender = String()
 
-    // MARK: Lifecycle Methods
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -82,11 +76,8 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         datepicker.addTarget(self, action: #selector(AddingNewMeasureTableViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
 
         setDateTextField.inputView = datepicker
-        let formatter = DateFormatter()
-        formatter.dateStyle = DateFormatter.Style.medium
-        dateString = formatter.string(from: Date())
+        dateString.formatCurrentDate()
         setDateTextField.text = dateString
-
     }
 
     //  ToolBar
@@ -127,16 +118,14 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         setDateTextField.text = dateString
     }
 
-    //  Today pressed for setDateTextF
+    //  Today pressed for setDateTextField
     @objc private func todayPressed(sender: UIBarButtonItem) {
-        let formatter = DateFormatter()
-        formatter.dateStyle = DateFormatter.Style.medium
-        dateString = formatter.string(from: Date())
+        dateString.formatCurrentDate()
         setDateTextField.text = dateString
         setDateTextField.resignFirstResponder()
     }
 
-    //  Done pressed for setDateTextF
+    //  Done pressed for setDateTextField
     @objc private func donePressed(sender: UIBarButtonItem) {
         setDateTextField.resignFirstResponder()
     }
@@ -178,30 +167,26 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
                 return
         }
 
-
-        // If setDateTextField is empty put today date in UserData
-        guard let dateWrapped = setDateTextField.text?.isEmpty else { return }
-
-        if dateWrapped == true {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.medium
-            dateString = dateFormatter.string(from: Date())
-            setDateTextField.text = dateString
-        }
-
         // TODO: height have to be static
 
         let newUser = UserData(date: dateString, height: "180", weight: weightString, chest: chestString, waist: waistString, neck: neckString, bicRight: bicRightString, bicLeft: bicLeftString, hipRight: hipRightString, hipLeft: hipLeftString, gender: gender)
 
         StoredData.shared.data.append(newUser)
-        let goToUserDataViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
 
-        present(goToUserDataViewController, animated: true)
+        dismiss(animated: true)
         print(newUser.description)
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
 
-    // MARK: - UI Text Field Delegate Methods
+
+
+}
+
+// MARK: - UITextField Delegate Methods
+extension AddingNewMeasureTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == weightTextField {
             chestTextField.becomeFirstResponder()
@@ -224,12 +209,6 @@ class AddingNewMeasureTableViewController: UITableViewController, UITextFieldDel
         }
         return true
     }
-
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
-    }
-
-
 }
 
 private enum TypingResultButtonType: String {

@@ -9,17 +9,10 @@
 import UIKit
 
 extension UIViewController {
-    func showDefaultAlert(title: String, message: String) -> Void {
-        DispatchQueue.main.async {
-            let alertContoller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let OkAction = UIAlertAction(title: "OK", style: .destructive) {
-                (action: UIAlertAction!) in
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            alertContoller.addAction(OkAction)
-            self.present(alertContoller, animated: true, completion: nil)
-        }
+    func showDefaultAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }

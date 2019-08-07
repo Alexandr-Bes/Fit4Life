@@ -91,10 +91,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
         setDateTextField.inputView = datePicker
 
-        let formatter = DateFormatter()
-        formatter.dateStyle = DateFormatter.Style.medium
-        dateString = formatter.string(from: Date())
+        dateString.formatCurrentDate()
         setDateTextField.text = dateString
+        gender = "Man"
     }
 
 
@@ -138,9 +137,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     //  Today pressed for setDateTextField
     @objc private func todayPressed(sender: UIBarButtonItem) {
-        let formatter = DateFormatter()
-        formatter.dateStyle = DateFormatter.Style.medium
-        dateString = formatter.string(from: Date())
+        dateString.formatCurrentDate()
         setDateTextField.text = dateString
         setDateTextField.resignFirstResponder()
     }
@@ -186,19 +183,15 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
             return
         }
 
-        // If setDateTextField is empty put today date in UserData
-        guard let dateWrapped = setDateTextField.text?.isEmpty else {
-            return
-        }
+        let ifEmptyChest = chestString == "" ? "Not set" : chestString
+        let ifEmptyWaist = waistString == "" ? "Not set" : waistString
+        let ifEmptyNeck = neckString == "" ? "Not set" : neckString
+        let ifEmptyBicR = bicRightString == "" ? "Not set" : bicRightString
+        let ifEmptyBicL = bicLeftString == "" ? "Not set" : bicLeftString
+        let ifEmptyHipR = hipRightString == "" ? "Not set" : hipRightString
+        let ifEmptyHipL = hipLeftString == "" ? "Not set" : hipLeftString
 
-        if dateWrapped == true {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.medium
-            dateString = dateFormatter.string(from: Date())
-            setDateTextField.text = dateString
-        }
-
-        let newUser = UserData(date: dateString, height: heightString, weight: weightString, chest: chestString, waist: waistString, neck: neckString, bicRight: bicRightString, bicLeft: bicLeftString, hipRight: hipRightString, hipLeft: hipLeftString, gender: gender)
+        let newUser = UserData(date: dateString, height: heightString, weight: weightString, chest: ifEmptyChest, waist: ifEmptyWaist, neck: ifEmptyNeck, bicRight: ifEmptyBicR, bicLeft: ifEmptyBicL, hipRight: ifEmptyHipR, hipLeft: ifEmptyHipL, gender: gender)
 
         StoredData.shared.data.append(newUser)
 
