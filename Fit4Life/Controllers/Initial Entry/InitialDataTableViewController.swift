@@ -199,6 +199,9 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
         present(goToMainTabBarController, animated: true)
         print(newUser.description)
+
+        //Set Bool to UserDefaults whether the Initial Data was set
+        UserDefaults.standard.set(true, forKey: "ViewedInitialScreen")
     }
 
     @IBAction func manOrWomanToggle(_ sender: UISegmentedControl) {
