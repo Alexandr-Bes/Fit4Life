@@ -32,7 +32,6 @@ class WorkoutsViewController: UIViewController {
 
 // MARK: - Table View Data Source Methods
 extension WorkoutsViewController: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return workouts.count
     }

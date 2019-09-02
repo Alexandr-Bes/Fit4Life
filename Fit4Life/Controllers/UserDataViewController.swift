@@ -8,16 +8,16 @@
 
 import UIKit
 
-class UserDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserDataViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var userDataTableView: UITableView!
 
     // MARK: - Private Properties
     private struct Constants {
-        static let mainStoryBoardName = "Main"
+        static let mainStoryBoardName = "MyParameters"
         static let tabBarViewController = "MainTabBarController"
-        static let addingNewMeasureTableViewController = "AddingNewMeasureTableViewController"
+        static let addingNewMeasureNavController = "AddingNewMeasureNavigationController"
         static let dataTableViewCellId  = "DataTableViewCell"
     }
 
@@ -59,12 +59,17 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Actions
     @IBAction func addNewMeasure(_ sender: Any) {
 
-        let linkToAddingNewMeasureTableViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: "AddingNewMeasureNavigationController")
+        let linkToAddingNewMeasureTableViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.addingNewMeasureNavController)
 
         present(linkToAddingNewMeasureTableViewController, animated: true)
     }
 
-    // MARK: - UI Table View Delegate and Data Source Methods
+    
+}
+
+
+// MARK: - UI Table View Data Source Methods
+extension UserDataViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return StoredData.shared.data.count
     }
@@ -76,9 +81,11 @@ class UserDataViewController: UIViewController, UITableViewDelegate, UITableView
         cell.configure(data: measurement)
         return cell
     }
+}
 
+// MARK: - UI Table View Delegate Methods
+extension UserDataViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 49.5
     }
-    
 }

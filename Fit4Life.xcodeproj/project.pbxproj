@@ -54,7 +54,7 @@
 		FA43317E213DDD2F00378004 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		FA433180213DDE2700378004 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		FA433182213DE2E300378004 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
-		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = "User Data Model/UserData.swift"; sourceTree = "<group>"; };
 		FA9D39BB22FB5AD300C4CDC3 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 		FA9FABA7225D2D5F0089804D /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,19 +95,11 @@
 			path = "Initial Entry";
 			sourceTree = "<group>";
 		};
-		FA1BFB9920FAA89A003C1324 /* User Data Model */ = {
-			isa = PBXGroup;
-			children = (
-				FA6757FB2100EEAD0009A848 /* UserData.swift */,
-			);
-			path = "User Data Model";
-			sourceTree = "<group>";
-		};
 		FA2D4C3D2107F8E700FF2A9A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FA1BFB9920FAA89A003C1324 /* User Data Model */,
 				FA2D4C3E2107F92600FF2A9A /* StoredData.swift */,
+				FA6757FB2100EEAD0009A848 /* UserData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

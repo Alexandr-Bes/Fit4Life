@@ -13,7 +13,6 @@ class ExercisesViewController: UIViewController {
     // MARK: - Private properties
 
     private struct Constants {
-        static let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         static let exStoryboard = "Exercises"
         static let exVC = "SomeNewViewController"
         static let initialDataTC = "InitialDataTableViewController"

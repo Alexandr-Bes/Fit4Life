@@ -406,12 +406,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4D-wh-uua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2006" y="-1211"/>
+            <point key="canvasLocation" x="2945" y="-1908"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tDE-ky-RZm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kro-JU-pom" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="AddingNewMeasureNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="mXJ-sZ-N4h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="hdQ-td-f2m">
@@ -423,6 +422,7 @@
                         <segue destination="03y-e1-E0q" kind="relationship" relationship="rootViewController" id="bBi-3g-Pv5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kro-JU-pom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3750" y="-1211"/>
         </scene>

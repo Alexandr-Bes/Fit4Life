@@ -149,7 +149,6 @@ class AddingNewMeasureTableViewController: UITableViewController {
     }
 
     @IBAction func saveNewMeasureButton(_ sender: Any) {
-
         if (weightTextField.text?.isEmpty)! {
             showDefaultAlert(title: "Oops", message: "Sorry, you have to type at least your weight")
             return
@@ -167,20 +166,18 @@ class AddingNewMeasureTableViewController: UITableViewController {
                 return
         }
 
-        // TODO: height have to be static
+        // TODO: height have to be static. Currently I can't do it because I don't use DataBase for now.
 
-        let newUser = UserData(date: dateString, height: "180", weight: weightString, chest: chestString, waist: waistString, neck: neckString, bicRight: bicRightString, bicLeft: bicLeftString, hipRight: hipRightString, hipLeft: hipLeftString, gender: gender)
+        let newUserData = UserData(date: dateString, height: "180", weight: weightString, chest: chestString, waist: waistString, neck: neckString, bicRight: bicRightString, bicLeft: bicLeftString, hipRight: hipRightString, hipLeft: hipLeftString, gender: gender)
 
-        StoredData.shared.data.append(newUser)
-
+        StoredData.shared.data.append(newUserData)
         dismiss(animated: true)
-        print(newUser.description)
+        print(newUserData.description)
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-
 
 
 }
