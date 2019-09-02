@@ -29,6 +29,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     private struct Constants {
         static let mainStoryBoardName = "Main"
         static let tabBarViewController = "MainTabBarController"
+        static let ifViewedInitialScreen = "ViewedInitialScreen"
     }
 
     private var dateString = String()
@@ -43,6 +44,12 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
     // MARK: - Private Methods
     private func setupUI() {
+
+        // If User have already set his/her initial data then don't show this screen
+        if UserDefaults.standard.bool(forKey: Constants.ifViewedInitialScreen) {
+            let goToMainTabBarController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.tabBarViewController)
+            present(goToMainTabBarController, animated: true)
+        }
 
         // Keyboard for text fields
         nameTextField.keyboardType = .namePhonePad

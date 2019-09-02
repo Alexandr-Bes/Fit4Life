@@ -24,7 +24,6 @@ class ExercisesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        ifViewedInitialScreen()
     }
 
     // MARK: - Private Methods
@@ -32,27 +31,6 @@ class ExercisesViewController: UIViewController {
         title = "Muscle Group"
 
     }
-
-    // FIXME: - Need some improvements!
-    private func ifViewedInitialScreen() {
-        if UserDefaults.standard.bool(forKey: "ViewedInitialScreen") {
-            return
-        }
-        let initialDataTC = Constants.mainStoryboard.instantiateViewController(withIdentifier: Constants.initialDataTC) as! InitialDataTableViewController
-
-        if let navCtrl = self.navigationController
-        {
-            navCtrl.pushViewController(initialDataTC, animated: true)
-        }
-        else
-        {
-            let navCtrl = UINavigationController(rootViewController: initialDataTC)
-            present(navCtrl, animated: true, completion: nil)
-        }
-
-
-    }
-
 
 
 }
