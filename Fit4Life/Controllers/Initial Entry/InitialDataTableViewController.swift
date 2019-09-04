@@ -11,6 +11,7 @@ import UIKit
 class InitialDataTableViewController: UITableViewController, UITextFieldDelegate {
 
     // MARK: - Outlets
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
@@ -43,6 +44,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 
     // MARK: - Private Methods
+
     private func setupUI() {
 
         // If User have already set his/her initial data then don't show this screen
@@ -169,6 +171,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }()
 
     // MARK: - Actions
+
     @IBAction func saveDataButton(_ sender: Any) {
 
         if  (heightTextField.text?.isEmpty)! ||
@@ -220,6 +223,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
     }
 
     // MARK: - UI Text Field Delegate methods
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
             heightTextField.becomeFirstResponder()
@@ -251,6 +255,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
 
 
 }
+
 
 private enum TypingResultButtonType: String {
     case next = "Next"

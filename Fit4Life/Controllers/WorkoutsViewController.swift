@@ -28,6 +28,7 @@ class WorkoutsViewController: UIViewController {
         //Register for WorkoutCell.xib
         workoutTableView.register(UINib(nibName: WorkoutCell.identifier, bundle: nil), forCellReuseIdentifier: WorkoutCell.identifier)
     }
+
 }
 
 // MARK: - Table View Data Source Methods
@@ -57,7 +58,6 @@ extension WorkoutsViewController: UITableViewDataSource {
             workoutTableView.endUpdates()
         }
     }
-
 }
 
 // MARK: - Table View Delegate Methods

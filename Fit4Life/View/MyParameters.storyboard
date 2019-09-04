@@ -33,13 +33,21 @@
                         <viewLayoutGuide key="safeArea" id="JbK-Xg-H9H"/>
                     </view>
                     <navigationItem key="navigationItem" id="xOE-Nm-Bem">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OoQ-dc-hXB">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="addNewMeasure:" destination="rP9-Xs-5Od" id="aVC-5a-6BH"/>
-                                <segue destination="mXJ-sZ-N4h" kind="show" id="Yzr-5D-pQR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="OoQ-dc-hXB">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="addNewMeasure:" destination="rP9-Xs-5Od" id="aVC-5a-6BH"/>
+                                    <segue destination="mXJ-sZ-N4h" kind="show" id="Yzr-5D-pQR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="Sort" id="DLx-MX-DpX" userLabel="Sort">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sortButtonPressed:" destination="rP9-Xs-5Od" id="krK-gn-gOC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="userDataTableView" destination="guD-sH-bun" id="8lu-lC-1gn"/>
@@ -427,4 +435,7 @@
             <point key="canvasLocation" x="3750" y="-1211"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sort" width="25" height="25"/>
+    </resources>
 </document>

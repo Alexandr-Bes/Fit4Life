@@ -56,12 +56,33 @@ class UserDataViewController: UIViewController {
         userDataTableView.register(nib, forCellReuseIdentifier: Constants.dataTableViewCellId)
     }
 
+    // TODO: Implement sorting by date and weight
+    
+    private func showAlertSheet() {
+        let alert = UIAlertController(title: "Sort By", message: nil, preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let sortByDate = UIAlertAction(title: "Date", style: .default) { alert -> Void in
+            print("Sorted by date")
+        }
+        let sortByWeight = UIAlertAction(title: "Weight", style: .default) { alert -> Void in
+            print("Sorted by weight")
+        }
+        alert.addAction(sortByDate)
+        alert.addAction(sortByWeight)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+
     // MARK: - Actions
     @IBAction func addNewMeasure(_ sender: Any) {
 
         let linkToAddingNewMeasureTableViewController = UIStoryboard(name: Constants.mainStoryBoardName, bundle: nil).instantiateViewController(withIdentifier: Constants.addingNewMeasureNavController)
 
         present(linkToAddingNewMeasureTableViewController, animated: true)
+    }
+
+    @IBAction func sortButtonPressed(_ sender: UIBarButtonItem) {
+        showAlertSheet()
     }
 
     
