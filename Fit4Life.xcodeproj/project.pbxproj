@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042FA8EB98FCBDB0B4FAEAAF /* Pods_Fit4Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99932EEB6E2DF858BC8054 /* Pods_Fit4Life.framework */; };
+		A40C024523E83B20002F798A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024423E83B20002F798A /* Builder.swift */; };
+		A40C024723E83C01002F798A /* CreateUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024623E83C01002F798A /* CreateUserRouter.swift */; };
+		A40C024923E83C56002F798A /* CreateUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024823E83C56002F798A /* CreateUserProtocol.swift */; };
+		A40C024B23E83C62002F798A /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024A23E83C62002F798A /* CreateUserView.swift */; };
+		A40C024D23E83C6D002F798A /* CreateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024C23E83C6D002F798A /* CreateUserInteractor.swift */; };
+		A40C024F23E83C77002F798A /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024E23E83C77002F798A /* CreateUserPresenter.swift */; };
+		A40C025123E83C9B002F798A /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C025023E83C9B002F798A /* CreateUser.swift */; };
+		A40C025323E83F4E002F798A /* UIStoryboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C025223E83F4E002F798A /* UIStoryboard+extension.swift */; };
 		FA03A75B22B97A74008EA1EF /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75922B97A73008EA1EF /* Workouts.storyboard */; };
 		FA03A75D22B97B07008EA1EF /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75C22B97B07008EA1EF /* Logs.storyboard */; };
 		FA03A76022B97B7D008EA1EF /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75E22B97B7D008EA1EF /* Exercises.storyboard */; };
@@ -26,7 +35,7 @@
 		FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433180213DDE2700378004 /* WorkoutsViewController.swift */; };
 		FA433183213DE2E300378004 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433182213DE2E300378004 /* LogsViewController.swift */; };
 		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
-		FA9D39BC22FB5AD300C4CDC3 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D39BB22FB5AD300C4CDC3 /* String+DateFormatter.swift */; };
+		FA9D39BC22FB5AD300C4CDC3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D39BB22FB5AD300C4CDC3 /* String+extension.swift */; };
 		FA9FABA8225D2D5F0089804D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9FABA7225D2D5F0089804D /* Settings.storyboard */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
@@ -36,6 +45,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B132E85621921058212BA0A /* Pods-Fit4Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit4Life.release.xcconfig"; path = "Target Support Files/Pods-Fit4Life/Pods-Fit4Life.release.xcconfig"; sourceTree = "<group>"; };
+		A40C024423E83B20002F798A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		A40C024623E83C01002F798A /* CreateUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserRouter.swift; sourceTree = "<group>"; };
+		A40C024823E83C56002F798A /* CreateUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserProtocol.swift; sourceTree = "<group>"; };
+		A40C024A23E83C62002F798A /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
+		A40C024C23E83C6D002F798A /* CreateUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserInteractor.swift; sourceTree = "<group>"; };
+		A40C024E23E83C77002F798A /* CreateUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
+		A40C025023E83C9B002F798A /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		A40C025223E83F4E002F798A /* UIStoryboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+extension.swift"; sourceTree = "<group>"; };
+		DF99932EEB6E2DF858BC8054 /* Pods_Fit4Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit4Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72BA9CC692758A48DEF8B1D /* Pods-Fit4Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit4Life.debug.xcconfig"; path = "Target Support Files/Pods-Fit4Life/Pods-Fit4Life.debug.xcconfig"; sourceTree = "<group>"; };
 		FA03A75A22B97A73008EA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fit4Life/View/Base.lproj/Workouts.storyboard; sourceTree = "<group>"; };
 		FA03A75C22B97B07008EA1EF /* Logs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logs.storyboard; sourceTree = "<group>"; };
 		FA03A75F22B97B7D008EA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fit4Life/View/Base.lproj/Exercises.storyboard; sourceTree = "<group>"; };
@@ -55,7 +75,7 @@
 		FA433180213DDE2700378004 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		FA433182213DE2E300378004 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = "User Data Model/UserData.swift"; sourceTree = "<group>"; };
-		FA9D39BB22FB5AD300C4CDC3 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
+		FA9D39BB22FB5AD300C4CDC3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		FA9FABA7225D2D5F0089804D /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC91D3220CD890000E301B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,18 +91,114 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042FA8EB98FCBDB0B4FAEAAF /* Pods_Fit4Life.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A40C023923E839EB002F798A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A40C023A23E839F6002F798A /* Create User */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A40C023A23E839F6002F798A /* Create User */ = {
+			isa = PBXGroup;
+			children = (
+				A40C023B23E83A19002F798A /* Protocol */,
+				A40C023C23E83A2B002F798A /* View */,
+				A40C023E23E83A35002F798A /* Interactor */,
+				A40C023F23E83A3C002F798A /* Presenter */,
+				A40C024123E83A4D002F798A /* Entity */,
+				A40C024023E83A43002F798A /* Router */,
+			);
+			path = "Create User";
+			sourceTree = "<group>";
+		};
+		A40C023B23E83A19002F798A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024823E83C56002F798A /* CreateUserProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A40C023C23E83A2B002F798A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024A23E83C62002F798A /* CreateUserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A40C023E23E83A35002F798A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024C23E83C6D002F798A /* CreateUserInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A40C023F23E83A3C002F798A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024E23E83C77002F798A /* CreateUserPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A40C024023E83A43002F798A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024623E83C01002F798A /* CreateUserRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A40C024123E83A4D002F798A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A40C025023E83C9B002F798A /* CreateUser.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A40C024223E83A9C002F798A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024323E83B10002F798A /* Builder */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A40C024323E83B10002F798A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				A40C024423E83B20002F798A /* Builder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		C0689654D2B902BC0BB35091 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E72BA9CC692758A48DEF8B1D /* Pods-Fit4Life.debug.xcconfig */,
+				3B132E85621921058212BA0A /* Pods-Fit4Life.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA03A76322B98633008EA1EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FA03A76422B98FDC008EA1EF /* ViewController+DisplayAlert.swift */,
-				FA9D39BB22FB5AD300C4CDC3 /* String+DateFormatter.swift */,
+				FA9D39BB22FB5AD300C4CDC3 /* String+extension.swift */,
 				FA03A76C22BA41DC008EA1EF /* TableViewCell+Identifier.swift */,
+				A40C025223E83F4E002F798A /* UIStoryboard+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -93,6 +209,14 @@
 				FA1BFB9720FAA42C003C1324 /* InitialDataTableViewController.swift */,
 			);
 			path = "Initial Entry";
+			sourceTree = "<group>";
+		};
+		FA21DF469479F84BA037602E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF99932EEB6E2DF858BC8054 /* Pods_Fit4Life.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FA2D4C3D2107F8E700FF2A9A /* Data */ = {
@@ -192,6 +316,8 @@
 				FAC91D3220CD890000E301B2 /* AppDelegate.swift */,
 				FAC91D3E20CD890100E301B2 /* LaunchScreen.storyboard */,
 				FAC91D3020CD890000E301B2 /* Products */,
+				C0689654D2B902BC0BB35091 /* Pods */,
+				FA21DF469479F84BA037602E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +332,8 @@
 		FAC91D3120CD890000E301B2 /* Fit4Life */ = {
 			isa = PBXGroup;
 			children = (
+				A40C024223E83A9C002F798A /* Utils */,
+				A40C023923E839EB002F798A /* Modules */,
 				FA9FABA4225D27A30089804D /* View */,
 				FA9FABA2225D24680089804D /* Controllers */,
 				FA9FABA6225D295F0089804D /* TableView Cells */,
@@ -222,9 +350,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC91D4420CD890100E301B2 /* Build configuration list for PBXNativeTarget "Fit4Life" */;
 			buildPhases = (
+				DC03EC81B753271DCE8159EB /* [CP] Check Pods Manifest.lock */,
 				FAC91D2B20CD890000E301B2 /* Sources */,
 				FAC91D2C20CD890000E301B2 /* Frameworks */,
 				FAC91D2D20CD890000E301B2 /* Resources */,
+				F0AD02C4E6A6C4871AEC9B3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,23 +419,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DC03EC81B753271DCE8159EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fit4Life-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0AD02C4E6A6C4871AEC9B3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fit4Life/Pods-Fit4Life-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fit4Life/Pods-Fit4Life-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fit4Life/Pods-Fit4Life-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAC91D2B20CD890000E301B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */,
+				A40C024B23E83C62002F798A /* CreateUserView.swift in Sources */,
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
 				FA2D4C43210A550300FF2A9A /* UserDataViewController.swift in Sources */,
 				FA03A76522B98FDC008EA1EF /* ViewController+DisplayAlert.swift in Sources */,
+				A40C025323E83F4E002F798A /* UIStoryboard+extension.swift in Sources */,
+				A40C024923E83C56002F798A /* CreateUserProtocol.swift in Sources */,
+				A40C025123E83C9B002F798A /* CreateUser.swift in Sources */,
 				FA43317F213DDD2F00378004 /* ExercisesViewController.swift in Sources */,
 				FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */,
+				A40C024523E83B20002F798A /* Builder.swift in Sources */,
 				FA03A76D22BA41DC008EA1EF /* TableViewCell+Identifier.swift in Sources */,
+				A40C024D23E83C6D002F798A /* CreateUserInteractor.swift in Sources */,
 				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
-				FA9D39BC22FB5AD300C4CDC3 /* String+DateFormatter.swift in Sources */,
+				A40C024F23E83C77002F798A /* CreateUserPresenter.swift in Sources */,
+				FA9D39BC22FB5AD300C4CDC3 /* String+extension.swift in Sources */,
 				FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */,
 				FA03A76A22BA3FB0008EA1EF /* WorkoutCell.swift in Sources */,
+				A40C024723E83C01002F798A /* CreateUserRouter.swift in Sources */,
 				FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */,
 				FA2D4C472113AC2D00FF2A9A /* DataTableViewCell.swift in Sources */,
 				FA2D4C4C2117570200FF2A9A /* AddingNewMeasureTableViewController.swift in Sources */,
@@ -467,6 +647,7 @@
 		};
 		FAC91D4520CD890100E301B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E72BA9CC692758A48DEF8B1D /* Pods-Fit4Life.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +666,7 @@
 		};
 		FAC91D4620CD890100E301B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B132E85621921058212BA0A /* Pods-Fit4Life.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
