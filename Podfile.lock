@@ -1,0 +1,16 @@
+PODS:
+  - Viperit (1.4.4)
+
+DEPENDENCIES:
+  - Viperit (~> 1.4.4)
+
+SPEC REPOS:
+  trunk:
+    - Viperit
+
+SPEC CHECKSUMS:
+  Viperit: cd08e50b10a1f58c6dad0833bbc111e4de398b31
+
+PODFILE CHECKSUM: 54605966b285ba10a7f76f7305e123664c0ad0f9
+
+COCOAPODS: 1.8.4
