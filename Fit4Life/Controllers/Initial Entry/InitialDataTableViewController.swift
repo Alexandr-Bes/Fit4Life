@@ -81,6 +81,7 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
+        tableView.backgroundColor = .gray
 
         heightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.height.rawValue)
         weightTextField.inputAccessoryView = makeToolBar(type: .next, tag: TextField.weight.rawValue)
@@ -249,8 +250,20 @@ class InitialDataTableViewController: UITableViewController, UITextFieldDelegate
         return true
     }
 
+    // MARK: - UITableViewDelegate
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 30
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .darkGray
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .white
     }
 
 

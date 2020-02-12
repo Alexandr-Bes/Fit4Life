@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
-struct User {
+public class User: NSManagedObject {
+    
+}
+
+struct User1 {
     
     var date: String
     var height: String

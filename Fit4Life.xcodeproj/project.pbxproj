@@ -35,11 +35,23 @@
 		FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433180213DDE2700378004 /* WorkoutsViewController.swift */; };
 		FA433183213DE2E300378004 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA433182213DE2E300378004 /* LogsViewController.swift */; };
 		FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6757FB2100EEAD0009A848 /* UserData.swift */; };
+		FA94ABAB23E8DA22003C10FD /* Settings1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA94ABA423E8DA22003C10FD /* Settings1.storyboard */; };
+		FA94ABAC23E8DA22003C10FD /* SettingsDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABA523E8DA22003C10FD /* SettingsDisplayData.swift */; };
+		FA94ABAD23E8DA22003C10FD /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABA623E8DA22003C10FD /* SettingsPresenter.swift */; };
+		FA94ABAE23E8DA22003C10FD /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABA723E8DA22003C10FD /* SettingsRouter.swift */; };
+		FA94ABAF23E8DA22003C10FD /* SettingsModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABA823E8DA22003C10FD /* SettingsModuleApi.swift */; };
+		FA94ABB023E8DA22003C10FD /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABA923E8DA22003C10FD /* SettingsInteractor.swift */; };
+		FA94ABB123E8DA22003C10FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABAA23E8DA22003C10FD /* SettingsView.swift */; };
+		FA94ABB423F4B2C3003C10FD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABB323F4B2C3003C10FD /* Utility.swift */; };
+		FA94ABB623F4B672003C10FD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABB523F4B672003C10FD /* Error.swift */; };
+		FA94ABB823F4B838003C10FD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABB723F4B838003C10FD /* User+CoreDataProperties.swift */; };
+		FA94ABC223F4BE9D003C10FD /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABC123F4BE9D003C10FD /* CoreDataStore.swift */; };
+		FA94ABC523F4BF9C003C10FD /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94ABC423F4BF9C003C10FD /* UserDataManager.swift */; };
 		FA9D39BC22FB5AD300C4CDC3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D39BB22FB5AD300C4CDC3 /* String+extension.swift */; };
 		FA9FABA8225D2D5F0089804D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9FABA7225D2D5F0089804D /* Settings.storyboard */; };
 		FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3220CD890000E301B2 /* AppDelegate.swift */; };
 		FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3620CD890000E301B2 /* Main.storyboard */; };
-		FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */; };
+		FAC91D3B20CD890000E301B2 /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC91D3920CD890000E301B2 /* User.xcdatamodeld */; };
 		FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3C20CD890100E301B2 /* Assets.xcassets */; };
 		FAC91D4020CD890100E301B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC91D3E20CD890100E301B2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -75,6 +87,18 @@
 		FA433180213DDE2700378004 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		FA433182213DE2E300378004 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		FA6757FB2100EEAD0009A848 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = "User Data Model/UserData.swift"; sourceTree = "<group>"; };
+		FA94ABA423E8DA22003C10FD /* Settings1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Settings1.storyboard; path = Fit4Life/Modules/Settings/Settings1.storyboard; sourceTree = SOURCE_ROOT; };
+		FA94ABA523E8DA22003C10FD /* SettingsDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsDisplayData.swift; path = Fit4Life/Modules/Settings/SettingsDisplayData.swift; sourceTree = SOURCE_ROOT; };
+		FA94ABA623E8DA22003C10FD /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsPresenter.swift; path = Fit4Life/Modules/Settings/SettingsPresenter.swift; sourceTree = SOURCE_ROOT; };
+		FA94ABA723E8DA22003C10FD /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsRouter.swift; path = Fit4Life/Modules/Settings/SettingsRouter.swift; sourceTree = SOURCE_ROOT; };
+		FA94ABA823E8DA22003C10FD /* SettingsModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsModuleApi.swift; path = Fit4Life/Modules/Settings/SettingsModuleApi.swift; sourceTree = SOURCE_ROOT; };
+		FA94ABA923E8DA22003C10FD /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsInteractor.swift; path = Fit4Life/Modules/Settings/SettingsInteractor.swift; sourceTree = SOURCE_ROOT; };
+		FA94ABAA23E8DA22003C10FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Fit4Life/Modules/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		FA94ABB323F4B2C3003C10FD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		FA94ABB523F4B672003C10FD /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		FA94ABB723F4B838003C10FD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA94ABC123F4BE9D003C10FD /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		FA94ABC423F4BF9C003C10FD /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		FA9D39BB22FB5AD300C4CDC3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		FA9FABA7225D2D5F0089804D /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		FAC91D2F20CD890000E301B2 /* Fit4Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fit4Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +125,7 @@
 		A40C023923E839EB002F798A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA94ABB223F4A0CE003C10FD /* Settings */,
 				A40C023A23E839F6002F798A /* Create User */,
 			);
 			path = Modules;
@@ -163,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A40C025023E83C9B002F798A /* CreateUser.swift */,
+				FA94ABB723F4B838003C10FD /* User+CoreDataProperties.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -170,6 +196,8 @@
 		A40C024223E83A9C002F798A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA94ABC323F4BF7A003C10FD /* Data Manager */,
+				FA03A76322B98633008EA1EF /* Extensions */,
 				A40C024323E83B10002F798A /* Builder */,
 			);
 			path = Utils;
@@ -253,6 +281,28 @@
 			path = "Main Tab Bar";
 			sourceTree = "<group>";
 		};
+		FA94ABB223F4A0CE003C10FD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FA94ABA423E8DA22003C10FD /* Settings1.storyboard */,
+				FA94ABA523E8DA22003C10FD /* SettingsDisplayData.swift */,
+				FA94ABA623E8DA22003C10FD /* SettingsPresenter.swift */,
+				FA94ABA723E8DA22003C10FD /* SettingsRouter.swift */,
+				FA94ABA823E8DA22003C10FD /* SettingsModuleApi.swift */,
+				FA94ABA923E8DA22003C10FD /* SettingsInteractor.swift */,
+				FA94ABAA23E8DA22003C10FD /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FA94ABC323F4BF7A003C10FD /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA94ABC423F4BF9C003C10FD /* UserDataManager.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
 		FA9FABA2225D24680089804D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +325,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FA9FABA4225D27A30089804D /* View */ = {
+		FA9FABA4225D27A30089804D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				FAC91D3620CD890000E301B2 /* Main.storyboard */,
@@ -285,14 +335,14 @@
 				FA03A76122B982CA008EA1EF /* MyParameters.storyboard */,
 				FA9FABA7225D2D5F0089804D /* Settings.storyboard */,
 			);
-			path = View;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		FA9FABA5225D28C60089804D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				FAC91D4120CD890100E301B2 /* Info.plist */,
-				FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */,
+				FAC91D3920CD890000E301B2 /* User.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -333,11 +383,13 @@
 			isa = PBXGroup;
 			children = (
 				A40C024223E83A9C002F798A /* Utils */,
+				FA94ABC123F4BE9D003C10FD /* CoreDataStore.swift */,
+				FA94ABB523F4B672003C10FD /* Error.swift */,
+				FA94ABB323F4B2C3003C10FD /* Utility.swift */,
 				A40C023923E839EB002F798A /* Modules */,
-				FA9FABA4225D27A30089804D /* View */,
+				FA9FABA4225D27A30089804D /* Storyboards */,
 				FA9FABA2225D24680089804D /* Controllers */,
 				FA9FABA6225D295F0089804D /* TableView Cells */,
-				FA03A76322B98633008EA1EF /* Extensions */,
 				FA9FABA3225D24790089804D /* Model */,
 			);
 			path = Fit4Life;
@@ -406,6 +458,7 @@
 			files = (
 				FAC91D4020CD890100E301B2 /* LaunchScreen.storyboard in Resources */,
 				FAC91D3D20CD890100E301B2 /* Assets.xcassets in Resources */,
+				FA94ABAB23E8DA22003C10FD /* Settings1.storyboard in Resources */,
 				FAC91D3820CD890000E301B2 /* Main.storyboard in Resources */,
 				FA03A76222B982CA008EA1EF /* MyParameters.storyboard in Resources */,
 				FA2D4C482113AC2D00FF2A9A /* DataTableViewCell.xib in Resources */,
@@ -469,24 +522,35 @@
 				FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */,
 				A40C024B23E83C62002F798A /* CreateUserView.swift in Sources */,
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
+				FA94ABAE23E8DA22003C10FD /* SettingsRouter.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
 				FA2D4C43210A550300FF2A9A /* UserDataViewController.swift in Sources */,
 				FA03A76522B98FDC008EA1EF /* ViewController+DisplayAlert.swift in Sources */,
+				FA94ABC523F4BF9C003C10FD /* UserDataManager.swift in Sources */,
 				A40C025323E83F4E002F798A /* UIStoryboard+extension.swift in Sources */,
+				FA94ABAD23E8DA22003C10FD /* SettingsPresenter.swift in Sources */,
 				A40C024923E83C56002F798A /* CreateUserProtocol.swift in Sources */,
 				A40C025123E83C9B002F798A /* CreateUser.swift in Sources */,
+				FA94ABB023E8DA22003C10FD /* SettingsInteractor.swift in Sources */,
 				FA43317F213DDD2F00378004 /* ExercisesViewController.swift in Sources */,
 				FA433181213DDE2700378004 /* WorkoutsViewController.swift in Sources */,
 				A40C024523E83B20002F798A /* Builder.swift in Sources */,
+				FA94ABB123E8DA22003C10FD /* SettingsView.swift in Sources */,
+				FA94ABB623F4B672003C10FD /* Error.swift in Sources */,
 				FA03A76D22BA41DC008EA1EF /* TableViewCell+Identifier.swift in Sources */,
+				FA94ABAC23E8DA22003C10FD /* SettingsDisplayData.swift in Sources */,
 				A40C024D23E83C6D002F798A /* CreateUserInteractor.swift in Sources */,
 				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
 				A40C024F23E83C77002F798A /* CreateUserPresenter.swift in Sources */,
+				FA94ABAF23E8DA22003C10FD /* SettingsModuleApi.swift in Sources */,
 				FA9D39BC22FB5AD300C4CDC3 /* String+extension.swift in Sources */,
-				FAC91D3B20CD890000E301B2 /* Fit4Life.xcdatamodeld in Sources */,
+				FAC91D3B20CD890000E301B2 /* User.xcdatamodeld in Sources */,
 				FA03A76A22BA3FB0008EA1EF /* WorkoutCell.swift in Sources */,
 				A40C024723E83C01002F798A /* CreateUserRouter.swift in Sources */,
+				FA94ABB423F4B2C3003C10FD /* Utility.swift in Sources */,
+				FA94ABC223F4BE9D003C10FD /* CoreDataStore.swift in Sources */,
 				FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */,
+				FA94ABB823F4B838003C10FD /* User+CoreDataProperties.swift in Sources */,
 				FA2D4C472113AC2D00FF2A9A /* DataTableViewCell.swift in Sources */,
 				FA2D4C4C2117570200FF2A9A /* AddingNewMeasureTableViewController.swift in Sources */,
 				FA433183213DE2E300378004 /* LogsViewController.swift in Sources */,
@@ -707,13 +771,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FAC91D3920CD890000E301B2 /* Fit4Life.xcdatamodeld */ = {
+		FAC91D3920CD890000E301B2 /* User.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				FAC91D3A20CD890000E301B2 /* Fit4Life.xcdatamodel */,
 			);
 			currentVersion = FAC91D3A20CD890000E301B2 /* Fit4Life.xcdatamodel */;
-			path = Fit4Life.xcdatamodeld;
+			path = User.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

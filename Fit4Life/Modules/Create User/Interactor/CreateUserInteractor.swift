@@ -7,7 +7,23 @@
 //
 
 import Foundation
+import CoreData
 
-class CreateUserInteractor {
+class CreateUserInteractor: CreateUserPresenterInteractorProtocol {
+    var presenter: CreateUserInteractorPresenterProtocol?
+    var dataManager: CreateUserDataManagerInputProtocol?
+
+    func saveData() {
+        do {
+            if let user = try dataManager?.retrieveUser() {
+                // TODO: - Retrieving Data 
+//                let userModel = user
+            }
+        } catch {
+
+        }
+        print("save")
+    }
+
     
 }

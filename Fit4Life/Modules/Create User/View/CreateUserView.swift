@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-class CreateUserView {
+class CreateUserView: UIViewController {
     
 }
