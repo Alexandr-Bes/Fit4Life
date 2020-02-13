@@ -13,9 +13,7 @@ final class UserDataManager: CreateUserDataManagerInputProtocol {
         guard let managedOC = CoreDataStore.managedObjectContext else {
             throw PersistenceError.managedObjectContextNotFound
         }
-
         let request: NSFetchRequest<User> = NSFetchRequest(entityName: String(describing: User.self))
-
         return try managedOC.fetch(request)
     }
 

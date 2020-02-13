@@ -196,6 +196,9 @@
 		A40C024223E83A9C002F798A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA94ABC123F4BE9D003C10FD /* CoreDataStore.swift */,
+				FA94ABB523F4B672003C10FD /* Error.swift */,
+				FA94ABB323F4B2C3003C10FD /* Utility.swift */,
 				FA94ABC323F4BF7A003C10FD /* Data Manager */,
 				FA03A76322B98633008EA1EF /* Extensions */,
 				A40C024323E83B10002F798A /* Builder */,
@@ -383,9 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				A40C024223E83A9C002F798A /* Utils */,
-				FA94ABC123F4BE9D003C10FD /* CoreDataStore.swift */,
-				FA94ABB523F4B672003C10FD /* Error.swift */,
-				FA94ABB323F4B2C3003C10FD /* Utility.swift */,
 				A40C023923E839EB002F798A /* Modules */,
 				FA9FABA4225D27A30089804D /* Storyboards */,
 				FA9FABA2225D24680089804D /* Controllers */,
