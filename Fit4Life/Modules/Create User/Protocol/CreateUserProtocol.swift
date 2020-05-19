@@ -11,8 +11,8 @@ import UIKit
 
 protocol CreateUserPresenterViewProtocol: class {
 //    Preseneter -> View
-
-    //TODO
+    func createUser(_ user: User)
+    //TODO ?
 }
 
 protocol CreateUserViewPresenterProtocol: class {
@@ -31,6 +31,8 @@ protocol CreateUserPresenterInteractorProtocol: class {
 protocol CreateUserInteractorPresenterProtocol: class {
     //    Interactor -> Presenter
     //TODO
+    func createUser(_ user: User)
+    func createUserFailed(_ error: String)
 }
 
 protocol CreateUserDataManagerInputProtocol {
@@ -41,6 +43,11 @@ protocol CreateUserDataManagerInputProtocol {
 
 protocol CreateUserPresenterRouterProtocol: class {
     //    Presenter -> Router
-    //TODO
+    static func createUserModule() -> CreateUserViewController
+    func pushToMainTabBar(with locationPhoto: User,
+                                   in navigationController: UINavigationController)
 }
 
+enum UserError: Error {
+    
+}

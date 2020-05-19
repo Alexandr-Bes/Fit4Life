@@ -11,7 +11,7 @@
 		A40C024523E83B20002F798A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024423E83B20002F798A /* Builder.swift */; };
 		A40C024723E83C01002F798A /* CreateUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024623E83C01002F798A /* CreateUserRouter.swift */; };
 		A40C024923E83C56002F798A /* CreateUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024823E83C56002F798A /* CreateUserProtocol.swift */; };
-		A40C024B23E83C62002F798A /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024A23E83C62002F798A /* CreateUserView.swift */; };
+		A40C024B23E83C62002F798A /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024A23E83C62002F798A /* CreateUserViewController.swift */; };
 		A40C024D23E83C6D002F798A /* CreateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024C23E83C6D002F798A /* CreateUserInteractor.swift */; };
 		A40C024F23E83C77002F798A /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024E23E83C77002F798A /* CreateUserPresenter.swift */; };
 		A40C025123E83C9B002F798A /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C025023E83C9B002F798A /* CreateUser.swift */; };
@@ -61,7 +61,7 @@
 		A40C024423E83B20002F798A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		A40C024623E83C01002F798A /* CreateUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserRouter.swift; sourceTree = "<group>"; };
 		A40C024823E83C56002F798A /* CreateUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserProtocol.swift; sourceTree = "<group>"; };
-		A40C024A23E83C62002F798A /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
+		A40C024A23E83C62002F798A /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		A40C024C23E83C6D002F798A /* CreateUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserInteractor.swift; sourceTree = "<group>"; };
 		A40C024E23E83C77002F798A /* CreateUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
 		A40C025023E83C9B002F798A /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		A40C023C23E83A2B002F798A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A40C024A23E83C62002F798A /* CreateUserView.swift */,
+				A40C024A23E83C62002F798A /* CreateUserViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -520,7 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2D4C3F2107F92600FF2A9A /* StoredData.swift in Sources */,
-				A40C024B23E83C62002F798A /* CreateUserView.swift in Sources */,
+				A40C024B23E83C62002F798A /* CreateUserViewController.swift in Sources */,
 				FA6757FC2100EEAD0009A848 /* UserData.swift in Sources */,
 				FA94ABAE23E8DA22003C10FD /* SettingsRouter.swift in Sources */,
 				FA1BFB9820FAA42C003C1324 /* InitialDataTableViewController.swift in Sources */,
