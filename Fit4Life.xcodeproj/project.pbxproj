@@ -16,6 +16,12 @@
 		A40C024F23E83C77002F798A /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C024E23E83C77002F798A /* CreateUserPresenter.swift */; };
 		A40C025123E83C9B002F798A /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C025023E83C9B002F798A /* CreateUser.swift */; };
 		A40C025323E83F4E002F798A /* UIStoryboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C025223E83F4E002F798A /* UIStoryboard+extension.swift */; };
+		A459A5E82511091D004655F3 /* CreateUserDataDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A5E22511091D004655F3 /* CreateUserDataDisplayData.swift */; };
+		A459A5E92511091D004655F3 /* CreateUserDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A5E32511091D004655F3 /* CreateUserDataPresenter.swift */; };
+		A459A5EA2511091D004655F3 /* CreateUserDataRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A5E42511091D004655F3 /* CreateUserDataRouter.swift */; };
+		A459A5EB2511091D004655F3 /* CreateUserDataModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A5E52511091D004655F3 /* CreateUserDataModuleApi.swift */; };
+		A459A5EC2511091D004655F3 /* CreateUserDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A5E62511091D004655F3 /* CreateUserDataInteractor.swift */; };
+		A459A5ED2511091D004655F3 /* CreateUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A5E72511091D004655F3 /* CreateUserDataView.swift */; };
 		FA03A75B22B97A74008EA1EF /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75922B97A73008EA1EF /* Workouts.storyboard */; };
 		FA03A75D22B97B07008EA1EF /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75C22B97B07008EA1EF /* Logs.storyboard */; };
 		FA03A76022B97B7D008EA1EF /* Exercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA03A75E22B97B7D008EA1EF /* Exercises.storyboard */; };
@@ -66,6 +72,12 @@
 		A40C024E23E83C77002F798A /* CreateUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
 		A40C025023E83C9B002F798A /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
 		A40C025223E83F4E002F798A /* UIStoryboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+extension.swift"; sourceTree = "<group>"; };
+		A459A5E22511091D004655F3 /* CreateUserDataDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDataDisplayData.swift; sourceTree = "<group>"; };
+		A459A5E32511091D004655F3 /* CreateUserDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDataPresenter.swift; sourceTree = "<group>"; };
+		A459A5E42511091D004655F3 /* CreateUserDataRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDataRouter.swift; sourceTree = "<group>"; };
+		A459A5E52511091D004655F3 /* CreateUserDataModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDataModuleApi.swift; sourceTree = "<group>"; };
+		A459A5E62511091D004655F3 /* CreateUserDataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDataInteractor.swift; sourceTree = "<group>"; };
+		A459A5E72511091D004655F3 /* CreateUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserDataView.swift; sourceTree = "<group>"; };
 		DF99932EEB6E2DF858BC8054 /* Pods_Fit4Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit4Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72BA9CC692758A48DEF8B1D /* Pods-Fit4Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit4Life.debug.xcconfig"; path = "Target Support Files/Pods-Fit4Life/Pods-Fit4Life.debug.xcconfig"; sourceTree = "<group>"; };
 		FA03A75A22B97A73008EA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fit4Life/View/Base.lproj/Workouts.storyboard; sourceTree = "<group>"; };
@@ -125,6 +137,7 @@
 		A40C023923E839EB002F798A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A459A5EE25110935004655F3 /* Create User Data */,
 				FA94ABB223F4A0CE003C10FD /* Settings */,
 				A40C023A23E839F6002F798A /* Create User */,
 			);
@@ -212,6 +225,19 @@
 				A40C024423E83B20002F798A /* Builder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		A459A5EE25110935004655F3 /* Create User Data */ = {
+			isa = PBXGroup;
+			children = (
+				A459A5E22511091D004655F3 /* CreateUserDataDisplayData.swift */,
+				A459A5E32511091D004655F3 /* CreateUserDataPresenter.swift */,
+				A459A5E42511091D004655F3 /* CreateUserDataRouter.swift */,
+				A459A5E52511091D004655F3 /* CreateUserDataModuleApi.swift */,
+				A459A5E62511091D004655F3 /* CreateUserDataInteractor.swift */,
+				A459A5E72511091D004655F3 /* CreateUserDataView.swift */,
+			);
+			path = "Create User Data";
 			sourceTree = "<group>";
 		};
 		C0689654D2B902BC0BB35091 /* Pods */ = {
@@ -538,6 +564,7 @@
 				FA94ABB123E8DA22003C10FD /* SettingsView.swift in Sources */,
 				FA94ABB623F4B672003C10FD /* Error.swift in Sources */,
 				FA03A76D22BA41DC008EA1EF /* TableViewCell+Identifier.swift in Sources */,
+				A459A5EA2511091D004655F3 /* CreateUserDataRouter.swift in Sources */,
 				FA94ABAC23E8DA22003C10FD /* SettingsDisplayData.swift in Sources */,
 				A40C024D23E83C6D002F798A /* CreateUserInteractor.swift in Sources */,
 				FA1BFB9C20FAB391003C1324 /* MainTabBarController.swift in Sources */,
@@ -546,14 +573,19 @@
 				FA9D39BC22FB5AD300C4CDC3 /* String+extension.swift in Sources */,
 				FAC91D3B20CD890000E301B2 /* User.xcdatamodeld in Sources */,
 				FA03A76A22BA3FB0008EA1EF /* WorkoutCell.swift in Sources */,
+				A459A5E82511091D004655F3 /* CreateUserDataDisplayData.swift in Sources */,
 				A40C024723E83C01002F798A /* CreateUserRouter.swift in Sources */,
 				FA94ABB423F4B2C3003C10FD /* Utility.swift in Sources */,
 				FA94ABC223F4BE9D003C10FD /* CoreDataStore.swift in Sources */,
+				A459A5ED2511091D004655F3 /* CreateUserDataView.swift in Sources */,
 				FAC91D3320CD890000E301B2 /* AppDelegate.swift in Sources */,
+				A459A5EC2511091D004655F3 /* CreateUserDataInteractor.swift in Sources */,
 				FA94ABB823F4B838003C10FD /* User+CoreDataProperties.swift in Sources */,
+				A459A5E92511091D004655F3 /* CreateUserDataPresenter.swift in Sources */,
 				FA2D4C472113AC2D00FF2A9A /* DataTableViewCell.swift in Sources */,
 				FA2D4C4C2117570200FF2A9A /* AddingNewMeasureTableViewController.swift in Sources */,
 				FA433183213DE2E300378004 /* LogsViewController.swift in Sources */,
+				A459A5EB2511091D004655F3 /* CreateUserDataModuleApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -700,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -717,6 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 663DYMD95T;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,6 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 663DYMD95T;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
